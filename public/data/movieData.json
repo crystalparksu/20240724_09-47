@@ -1,0 +1,16 @@
+{
+  "movie": [
+    {
+      "id": 1,
+      "name": "잠 못 이루는 밤",
+      "time": "17:10",
+      "end_time": "19:48",
+      "date": "23.03.27(월)",
+      "theater": "s관",
+      "rating": "15세이상 관람가",
+      "total_seats": "39",
+      "available_seats": "22",
+      "image_url": "https://user-images.githubusercontent.com/118322531/221529814-52f7e164-6300-41ab-b7b3-1318efaf0490.png"
+    }
+  ]
+}

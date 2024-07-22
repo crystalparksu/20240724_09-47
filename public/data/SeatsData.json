@@ -1,0 +1,112 @@
+[
+  {
+    "timeTableId": 1,
+    "seatStatus": [
+      {
+        "status": "예매 불가능",
+        "seatStatusId": 3,
+        "timeTableSeatId": 1
+      }
+    ]
+  },
+  {
+    "timeTableId": 1,
+    "seatStatus": [
+      {
+        "status": "예매 불가능",
+        "seatStatusId": 3,
+        "timeTableSeatId": 2
+      }
+    ]
+  },
+  {
+    "timeTableId": 1,
+    "seatStatus": [
+      {
+        "status": "예매 불가능",
+        "seatStatusId": 3,
+        "timeTableSeatId": 3
+      }
+    ]
+  },
+  {
+    "timeTableId": 1,
+    "seatStatus": [
+      {
+        "status": "예매 가능",
+        "seatStatusId": 2,
+        "timeTableSeatId": 4
+      }
+    ]
+  },
+  {
+    "timeTableId": 1,
+    "seatStatus": [
+      {
+        "status": "통로",
+        "seatStatusId": 1,
+        "timeTableSeatId": 5
+      }
+    ]
+  },
+  {
+    "timeTableId": 1,
+    "seatStatus": [
+      {
+        "status": "예매 가능",
+        "seatStatusId": 2,
+        "timeTableSeatId": 6
+      }
+    ]
+  },
+  {
+    "timeTableId": 1,
+    "seatStatus": [
+      {
+        "status": "예매 가능",
+        "seatStatusId": 2,
+        "timeTableSeatId": 7
+      }
+    ]
+  },
+  {
+    "timeTableId": 1,
+    "seatStatus": [
+      {
+        "status": "예매 가능",
+        "seatStatusId": 2,
+        "timeTableSeatId": 8
+      }
+    ]
+  },
+  {
+    "timeTableId": 1,
+    "seatStatus": [
+      {
+        "status": "예매 가능",
+        "seatStatusId": 2,
+        "timeTableSeatId": 9
+      }
+    ]
+  },
+  {
+    "timeTableId": 1,
+    "seatStatus": [
+      {
+        "status": "예매 가능",
+        "seatStatusId": 2,
+        "timeTableSeatId": 10
+      }
+    ]
+  },
+  {
+    "timeTableId": 1,
+    "seatStatus": [
+      {
+        "status": "예매 가능",
+        "seatStatusId": 2,
+        "timeTableSeatId": 11
+      }
+    ]
+  }
+]

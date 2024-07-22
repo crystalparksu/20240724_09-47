@@ -1,0 +1,29 @@
+{
+  "getMovieDetail": [
+    {
+      "movieName": "잠 못 이루는 밤",
+      "movieNameInEnligh": "White Night",
+      "movieSimpleDescription": "한 여성이 자신의 아름다움에 대한 갈등과 불안으로 인해 잠을 이루지 못하는 이야기. 이 여성은 자신의 외모와 사회의 기대, 그리고 자신의 내면과의 갈등 속에서 존재감을 찾으려고 노력한다.",
+      "movieDetailDescription": "이 여성은 자신의 외모에 대한 인식이 매우 왜곡되어 있습니다. 그녀는 매우 아름다운 외모를 가지고 있지만, 그녀가 자신을 보는 시선은 매우 부정적입니다. 이는 그녀가 어릴 때부터 부모님, 친구들, 그리고 사회의 여러 영향으로부터 내면화된 것입니다. 그녀는 이러한 갈등 속에서 완벽한 아름다움을 추구하면서도, 그녀 자신이 원하는 삶과 행복을 찾으려고 노력합니다. 이 영화는 아름다움의 개념과 그것이 인간의 삶에 미치는 영향에 대한 진지하고 감동적인 메시지를 담고 있습니다.",
+      "movieTumbNailImg": "",
+      "movieOpeningDate": "2023-02-13",
+      "movieAgeRating": "12",
+      "movieRunningTime": "125분",
+      "country": "미국",
+      "scoreCard": 8,
+      "director": "라이언 존슨",
+      "movieActors": ["사만다 미셸", "루카스 피터슨", "에밀리 레이놀즈"],
+      "movieKeyword": ["로맨틱한", "몽환적인", "낭만적인"],
+      "moiveGenre": ["멜로", "로맨스"],
+      "movieStillCut": [
+        "https://cdn.pixabay.com/photo/2016/10/06/05/19/couple-1718244__480.jpg",
+        "https://cdn.pixabay.com/photo/2018/01/05/22/48/couple-3064048__480.jpg"
+      ],
+      "movieTrailer": [
+        "https://player.vimeo.com/external/137078188.mobile.mp4?s=50a306fbc9a658999fb505506064c2572c565638&profile_id=116",
+        "https://player.vimeo.com/external/463795692.hd.mp4?s=5be265806972083e00d716eac1f4c3e1db9299ae&profile_id=174",
+        "https://player.vimeo.com/progressive_redirect/playback/735655770/rendition/360p/file.mp4?loc=external&oauth2_token_id=1027659655&signature=cdaa777c8d707e8654ad91e4f5e72fe98513a5b1a57ce84e70838cfbda018f90"
+      ]
+    }
+  ]
+}

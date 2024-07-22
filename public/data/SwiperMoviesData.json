@@ -1,0 +1,88 @@
+[
+  {
+    "id": "14",
+    "movieName": "엔드 오브 애프터글로우",
+    "movieNameInEnglish": "End of Afterglow",
+    "movieSimpleDescription": "End of Afterglow'는 인생의 후회와 죄책감, 그리고 다시 찾은 희망을 그린 감동적인 인생 드라마이다.",
+    "movieThumbnailImageUrl": "",
+    "movieOpeningDate": "2023-02-26T15:00:00.000Z",
+    "filmAgeRating": "15"
+  },
+  {
+    "id": "11",
+    "movieName": "섀도우 플레이",
+    "movieNameInEnglish": "Shadow Play",
+    "movieSimpleDescription": "어둠과 빛의 조합으로 펼쳐지는 흑백 판타지 영화입니다. 무대 위에서 펼쳐지는 그림자 연극과 함께 펼쳐지는 인물들의 이야기를 담고 있습니다.",
+    "movieThumbnailImageUrl": "",
+    "filmAgeRating": "15"
+  },
+  {
+    "id": "15",
+    "movieName": "언젠가 서울",
+    "movieNameInEnglish": "Seoul someday",
+    "movieSimpleDescription": "한 여성의 서울에서의 인생 여정을 그린 감성적인 드라마",
+    "movieThumbnailImageUrl": "",
+    "filmAgeRating": "12"
+  },
+  {
+    "movieName": "벚꽃이 지나는 길",
+    "movieNameInEnglish": "Cherry Blossom Road",
+    "movieSimpleDescription": "'벚꽃이 지나는 길'은 첫사랑과 이별, 성장 등을 그린 감성적인 멜로드라마입니다. 각자의 이유로 헤어져야 하지만, 서로를 지우지 못하고 끝없이 그리워하며 인생의 여정을 떠나게 됩니다.",
+    "movieThumbnailImageUrl": "",
+    "movieOpeningDate": "2023-02-19T15:00:00.000Z",
+    "filmAgeRating": "18"
+  },
+  {
+    "id": "6",
+    "movieName": "한강에는 비가 내린다",
+    "movieNameInEnglish": "It's raining on the Han River",
+    "movieSimpleDescription": "서로 다른 사람들의 이야기를 가진 인물들이 모여 있는 한강을 배경으로 하는 감성적인 영화입니다.",
+    "movieThumbnailImageUrl": "",
+    "movieOpeningDate": "2023-02-18T15:00:00.000Z",
+    "filmAgeRating": "ALL"
+  },
+  {
+    "id": "14",
+    "movieName": "엔드 오브 애프터글로우",
+    "movieNameInEnglish": "End of Afterglow",
+    "movieSimpleDescription": "End of Afterglow'는 인생의 후회와 죄책감, 그리고 다시 찾은 희망을 그린 감동적인 인생 드라마이다.",
+    "movieThumbnailImageUrl": "",
+    "movieOpeningDate": "2023-02-26T15:00:00.000Z",
+    "filmAgeRating": "15"
+  },
+  {
+    "id": "11",
+    "movieName": "섀도우 플레이",
+    "movieNameInEnglish": "Shadow Play",
+    "movieSimpleDescription": "어둠과 빛의 조합으로 펼쳐지는 흑백 판타지 영화입니다. 무대 위에서 펼쳐지는 그림자 연극과 함께 펼쳐지는 인물들의 이야기를 담고 있습니다.",
+    "movieThumbnailImageUrl": "",
+    "movieOpeningDate": "2023-02-25T15:00:00.000Z",
+    "filmAgeRating": "15"
+  },
+  {
+    "id": "15",
+    "movieName": "언젠가 서울",
+    "movieNameInEnglish": "Seoul someday",
+    "movieSimpleDescription": "한 여성의 서울에서의 인생 여정을 그린 감성적인 드라마",
+    "movieThumbnailImageUrl": "",
+    "movieOpeningDate": "2023-02-23T15:00:00.000Z",
+    "filmAgeRating": "12"
+  },
+  {
+    "movieName": "벚꽃이 지나는 길",
+    "movieNameInEnglish": "Cherry Blossom Road",
+    "movieSimpleDescription": "'벚꽃이 지나는 길'은 첫사랑과 이별, 성장 등을 그린 감성적인 멜로드라마입니다. 각자의 이유로 헤어져야 하지만, 서로를 지우지 못하고 끝없이 그리워하며 인생의 여정을 떠나게 됩니다.",
+    "movieThumbnailImageUrl": "",
+    "movieOpeningDate": "2023-02-19T15:00:00.000Z",
+    "filmAgeRating": "18"
+  },
+  {
+    "id": "6",
+    "movieName": "한강에는 비가 내린다",
+    "movieNameInEnglish": "It's raining on the Han River",
+    "movieSimpleDescription": "서로 다른 사람들의 이야기를 가진 인물들이 모여 있는 한강을 배경으로 하는 감성적인 영화입니다.",
+    "movieThumbnailImageUrl": "",
+    "movieOpeningDate": "2023-02-18T15:00:00.000Z",
+    "filmAgeRating": "ALL"
+  }
+]

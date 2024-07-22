@@ -1,0 +1,59 @@
+
+/*검색창 전체 부모 박스*/
+.box{
+    position: relative;
+    box-sizing: content-box;
+    /*display: flex;*/
+    /*justify-content: end;*/
+    /*width: 300px;*/
+    /*height: 50px;*/
+}
+
+/*검색 아이콘*/
+.search_icon{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    vertical-align: top;
+}
+
+/*인 풋 */
+.search{
+
+}
+
+.search-box:hover{
+    box-shadow: 0px 0px .5px 1px #51e3d4;
+    width: 282px;
+}
+
+
+
+
+
+.search-box:hover > .search-btn{
+    background-color: #fff;
+}
+
+
+
+
+
+/*인풋 스타일*/
+.search-txt{
+    display: flex;
+    padding: 0;
+    width: 0px;
+    border:none;
+    background: none;
+    outline: none;
+    float: left;
+    font-size: 1rem;
+    line-height: 30px;
+    transition: .4s;
+}
+
+.search-box:hover > .search-txt{
+    width: 240px;
+    padding: 0 6px;
+}
