@@ -1,0 +1,170 @@
+.notice{
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+
+
+/* 공지사항 header */
+.noticeHead{
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+
+/* 공지사항 메뉴 내용 */
+.notice ul{
+    width: 70%;
+    height: 40px;
+
+    display: flex;
+    /* border: 1px solid whitesmoke; */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-bottom: 1px dashed rgb(235, 235, 235);
+}
+
+.notice_list ul:last-child{
+    border-bottom: none;
+}
+
+.notice ul li{
+    border-right: 1px dashed rgb(236, 236, 236);
+    padding-left: 10px;
+}
+
+
+/* 리스트 width 길이 */
+.notice ul li:first-child{
+    width: 15%;
+}
+.notice ul li:nth-child(2){
+    width: 70%;
+    text-align: left;
+}
+.notice_div ul li:nth-child(2){
+    /* .notice ul li:nth-child(2)보다 밑에 둘 것 */
+    text-align: center;
+}
+.notice ul li:last-child{
+    width: 15%;
+}
+
+
+
+.notice_list ul:nth-child(2n){
+    background-color: #686868;
+}
+.notice_list ul:nth-child(2n-1){
+    background-color: #b3b3b3;
+}
+
+
+/* ul에 hover시 배경색 변경 */
+.notice_list ul:hover{
+    background-color: #b2f8fa;
+    font-weight: 800;
+    color: #000;
+}
+
+.notice_list ul:hover a{
+    font-weight: 800;
+    color:#000;
+}
+
+/* li의 마지막 요소를 선택해 border 선 없애기 */
+.notice ul li:last-child{
+    border-right: none;
+}
+
+
+/* ================== 리스트 페이지 ================== */
+
+.page_no_ul{
+    width: 50%;
+    display: flex;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.page_no_ul li{
+    width: 10%;
+    border: 1px solid whitesmoke;
+
+}
+.page_no_ul li:hover{
+    background-color: #8dfbff;
+}
+.page_no_ul li:hover a{
+    color: black;
+}
+
+
+/* ================== 글 검색, 글쓰기 버튼 ================== */
+
+.search_write{
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    display: flex;
+    /* border: 1px solid white; */
+    position: relative;
+}
+
+
+/* 하단 검색창 */
+.botom_search{
+    width: 100%;
+    /* border: 1px solid red; */
+}
+.botom_search form{
+
+    display: flex;
+    justify-content: center;
+}
+.bottom_search_text{
+    width: 30%;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+
+/* 글쓰기 버튼 */
+.botom_write{
+    width: 200px;
+    /* height: 50px; */
+    position: absolute;
+    right: calc(10%);
+    /* border: 1px solid red; */
+}
+
+.write_btn{
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+}
+
+.write_btn:hover{
+    background-color: #f09b9b;
+}
+.write_btn:active{
+    background-color: #dbee86;
+}
+
+.write_btn a{
+    display: block;
+}
+
+
+
+
+
+
+
+
+

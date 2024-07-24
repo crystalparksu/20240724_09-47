@@ -103,8 +103,8 @@ const VideoBtn = styled.button`
     
     //버튼 클릭 했을 때
   &:hover {
-    color: rgb(254,107,12);
-      border: 2px solid rgb(254,107,12);
+    color: #02d6e8;
+      border: 2px solid #02d6e8;
       font-weight: 800;
       background: rgba(0, 0, 0, 0.19);
     transition: 0.3s;

@@ -91,9 +91,9 @@ const FooterTag = styled.footer`
   margin-right: auto;
   padding: 26px 0;
   text-align: center;
-  bottom: 0;
+  bottom: 0!important;
   width: 100%;
-  z-index: 99;
+  z-index: 9999999!important;
   background-color: rgb(11, 11, 13) !important;
   border-top: 1px solid rgb(25, 31, 40);
 

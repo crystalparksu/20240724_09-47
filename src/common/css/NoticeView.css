@@ -1,0 +1,145 @@
+/* ================================ 공지글 영역 ================================== */
+.noticeView{
+    width: 80%;
+    /* height: 100vh; */
+    margin-top: 20px;
+    /* border: 1px solid red; */
+}
+
+/* 공지글 제목 */
+.noticeViewHead{
+    text-align: center;
+
+}
+
+.noticeViewTitle{
+    font-size: 2rem;
+}
+
+.noticeViewInfo{
+    width: 80%;
+    /* border: 1px solid red; */
+    text-align: right;
+
+}
+
+.noticeViewInfo span{
+    margin-left: 10px;
+}
+
+/* 공지글 내용 */
+
+.noticeViewContent{
+    width: 80%;
+
+}
+.noticeText{
+    width: 95%;
+    height: 500px;
+    resize: none;
+    outline: none;
+    overflow: visible;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: none;
+    border: 2px solid rgb(172, 142, 167);
+}
+
+/* 스크롤바 css */
+.noticeText::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 5px;
+}
+.noticeText::-webkit-scrollbar-track {
+    border: 1px solid black;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+}
+.noticeText::-webkit-scrollbar-thumb { 
+    border: 1px solid rgb(56, 66, 156);
+    background-color: rgb(124, 246, 255);
+    border-radius: 5px;
+
+}
+.noticeText::-webkit-scrollbar-button {
+    display: none;
+}
+
+/* ================================ 버튼 영역 ================================== */
+.noticeViewBtn{
+    width: 80%;
+    /* border: 1px solid red; */
+    display: flex;
+
+}
+.noticeViewBtn button{
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+.noticeViewBtn button:hover{
+    background-color: #50b8f5;
+}
+.noticeViewBtn button:active{
+    background-color: #273dff;
+}
+
+/* 왼쪽 */
+.btn_left{
+    width: 20%;
+    /* border: 1px solid red; */
+}
+
+
+
+/* 중앙 */
+.btn_center{
+    width: 60%;
+    /* border: 1px solid red; */
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+.btn_center button{
+    width: 200px;
+    height: 50px;
+
+}
+
+
+
+
+/* 오른쪽 */
+.btn_right{
+    width: 20%;
+    /* border: 1px solid red; */
+    text-align: right;
+    /* padding-right: 10px; */
+}
+
+.back_to_list{
+    width: 100px;
+    height: 50px;
+
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

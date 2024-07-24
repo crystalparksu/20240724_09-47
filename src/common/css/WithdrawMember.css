@@ -1,0 +1,43 @@
+/* 탈퇴하기 로고 */
+.withdraw_title{
+    text-align: center;
+    margin: 100px;
+    font-size: 2rem;
+}
+/* 비밀번호입력 탈퇴하기 버튼 박스 */
+.password_form_div{
+    text-align: center;
+    margin-bottom: 10px;
+}
+/* 비밀번호 입력 제목 */
+.password_div2{
+    width: 27%;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+/* 비밀번호 적용란*/
+.check_password{
+    width: 27%;
+    height: 40px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+}
+/* 탈퇴하기 버튼 */
+.withdraw_btn{
+    width: 27%;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.main_page{
+    text-align: center;
+}
+.mainpage_btn{
+    width: 27%;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+

@@ -149,7 +149,7 @@ const Top4Title = styled.h1`
 
     .SectionANav{
         font-size: 1.2rem;
-        color: rgb(254,107,12,1);
+        color: #02d6e8;
         font-weight: 700;
         line-height: 1.5;
         letter-spacing: -0.5px;

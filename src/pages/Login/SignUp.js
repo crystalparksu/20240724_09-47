@@ -1,13 +1,50 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
-import {Button} from "react-bootstrap";
+import {Button, FormSelect} from "react-bootstrap";
+import SelectorEngine from "bootstrap/js/src/dom/selector-engine";
 
 
 
 
 // SignUp-회원가입
 function SignUp() {
+
+    const [values, setValues] = useState({
+        nameValue: '',
+        numberValue: '',
+        contentValue: '',
+    });
+
+    const { nameValue, numberValue, contentValue } = values;
+
+    const handleNumber = e => {
+        const { value, name } = e.target;
+
+        setValues({
+            ...values,
+            [name]: value,
+        });
+    };
+
+    useEffect(() => {
+        if (numberValue.length === 11) {
+            setValues({
+                numberValue: numberValue.replace(/(\d{3})(\d{4})(\d{4})/, '$1-$2-$3'),
+            });
+        } else if (numberValue.length === 13) {
+            setValues({
+                numberValue: numberValue
+                    //하이픈이 입력되면 공백으로 변경되고 하이픈이 다시 생성됨
+                    .replace(/-/g, '')
+                    .replace(/(\d{3})(\d{4})(\d{4})/, '$1-$2-$3'),
+            });
+        }
+    }, [numberValue]);
+
+
+
+
     const [isAllChecked, setIsAllChecked] = useState(false);
     const [checkedItems, setCheckedItems] = useState([]);
 
@@ -50,13 +87,18 @@ function SignUp() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [nickname, setNickname] = useState("");
+    const [gender, setGender] = useState("");
+
 
     let body = {
         email: email,
         password: password,
         nickname: nickname,
+        gender: gender,
+        values:values,
     };
 
+    //
     const onSubmit = async () => {
         try {
             const response = await axios.post(
@@ -87,6 +129,8 @@ function SignUp() {
     //   }
     // };
 
+
+    //이메일
     const emailCheck = async () => {
         if (email === "") {
             setCheckedEmail("필수 항목입니다.");
@@ -94,6 +138,8 @@ function SignUp() {
             var regex =
                 /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
             console.log("비밀번호 유효성 검사 :: ", regex.test(email));
+
+
 
             if (regex.test(email)) {
                 try {
@@ -110,7 +156,7 @@ function SignUp() {
                     console.log(e);
                 }
             } else {
-                setCheckedEmail("이메일 주소를 확인해 주세요.");
+                setCheckedEmail("아이디를 확인해 주세요.");
             }
         }
     };
@@ -224,16 +270,18 @@ function SignUp() {
                         {/*전화번호*/}
                         <FormBlock>
                             <FormBlockHead>
-                                <AsteriskRed>*</AsteriskRed> 전화번호
+                                <AsteriskRed>*</AsteriskRed> 전화번호  (＊하이픈 제외 입력)
                             </FormBlockHead>
                             <FormBlockBody>
                                 <UiInputBtnCombo>
                                     <InputTextSizeWTypeL>
-                                        <EmailInput type="hidden" required/>
-                                        <EmailInput
+                                        <PhoneInput type="hidden" required/>
+                                        <PhoneInput
                                             type="tel"
                                             placeholder="010-1234-5678"
-                                            data-auth="cell_phone"
+                                            name="numberValue"
+                                            value={numberValue || ''}
+                                            onChange={handleNumber}
                                             required
                                         />
                                     </InputTextSizeWTypeL>
@@ -258,9 +306,14 @@ function SignUp() {
                                             data-auth=""
                                             required
                                         />
-                                        <Button type="button" className="idbutton"
-                                            onClick="">이메일 전송
-                                        </Button>
+                                        <EmailsButton
+                                            type="button"
+                                            onClick={() => {
+                                                onSubmit();
+                                            }}
+                                        >
+                                            이메일 전송
+                                        </EmailsButton>
 
                                     </InputTextSizeWTypeL>
                                 </UiInputBtnCombo>
@@ -279,23 +332,22 @@ function SignUp() {
                                         <EmailsInput type="hidden" required/>
                                         <EmailsInput
                                             type="email"
-                                            placeholder="이메일을 입력해주세요"
+                                            placeholder="이메일을 확인해주세요"
                                             data-auth=""
                                             required
                                         />
-                                        <Button type="button" className="idbutton"
-                                                onClick="">인증번호 전송
-                                        </Button>
-
+                                        <EmailsButton
+                                            type="button"
+                                            onClick={() => {
+                                                onSubmit();
+                                            }}
+                                        >
+                                            인증코드
+                                        </EmailsButton>
                                     </InputTextSizeWTypeL>
                                 </UiInputBtnCombo>
                             </FormBlockBody>
                         </FormBlock>
-
-
-
-
-
 
 
                         {/*생년월일*/}
@@ -308,15 +360,15 @@ function SignUp() {
                                     <InputTextSizeWTypeL>
                                         <EmailInput type="hidden" required/>
                                         <EmailInput
-                                            type="tel"
-                                            placeholder="010-1234-5678"
-                                            data-auth="cell_phone"
+                                            type="date"
+                                            data-auth=""
                                             required
                                         />
                                     </InputTextSizeWTypeL>
                                 </UiInputBtnCombo>
                             </FormBlockBody>
                         </FormBlock>
+
 
 
                         {/*성별*/}
@@ -324,21 +376,23 @@ function SignUp() {
                             <FormBlockHead>
                                 <AsteriskRed>*</AsteriskRed> 성별
                             </FormBlockHead>
+
                             <FormBlockBody>
-                                <UiInputBtnCombo>
-                                    <InputTextSizeWTypeL>
-                                        <EmailInput type="hidden" required/>
-                                        <EmailInput
-                                            type="tel"
-                                            placeholder="010-1234-5678"
-                                            data-auth="cell_phone"
-                                            required
-                                        />
-                                    </InputTextSizeWTypeL>
-                                </UiInputBtnCombo>
+                                    {/*  성별 옵션 변경  */}
+                                <CustomSelect name="Gender"
+                                              value={gender}
+                                              data-auth=""
+                                              onChange={(e) => {
+                                                  setGender(e.target.value);
+                                              }}
+                                              required>
+                                    <CustomOption value="">성별</CustomOption>
+                                    <CustomOption value="">남성</CustomOption>
+                                    <CustomOption value="">여성</CustomOption>
+                                    <CustomOption value="">선택안함</CustomOption>
+                                </CustomSelect>
                             </FormBlockBody>
                         </FormBlock>
-
 
 
 
@@ -376,7 +430,9 @@ function SignUp() {
                                         </InputCheckBox>
                                         <Terms1Label>만 14세 이상입니다.</Terms1Label>
                                     </TermsItem>
+
                                     {/*  */}
+
                                     <TermsItem>
                                         <InputCheckBox>
                                             {/* <Terms1 type="checkbox"></Terms1> */}
@@ -396,17 +452,17 @@ function SignUp() {
                                     {/*  */}
                                 </TermsBody>
                             </Terms>
-
                             <Terms1Error/>
                             <TermsError/>
                         </FormBlockCheckAllWrap>
+
 
 
                         {/*회원가입 버튼*/}
                         <FormBlockSubmit>
                             <FormBlockBody>
                                 <BtnLogin
-                                    type="button"
+                                    type="submit"
                                     onClick={() => {
                                         onSubmit();
                                     }}
@@ -417,12 +473,27 @@ function SignUp() {
                         </FormBlockSubmit>
 
 
+                        {/*회원가입 속 로그인하러 가기*/}
+                        <AdditionTxt>
+                            이미 가입하셨다면&nbsp;&nbsp;<a href="/login">로그인</a>
+                        </AdditionTxt>
+
                     </LoginSection>
                 </LoginWrap>
             </ReauthPhone>
         </WrapLogin>
     );
 }
+
+const AdditionTxt = styled.button`
+    margin-top: 30px;
+    color: #666;
+    font-size: 14px;
+
+    a {
+        text-decoration: underline;
+    }
+`;
 
 const AuthBtn = styled.button`
   display: inline-block;
@@ -640,8 +711,23 @@ const EmailsInput= styled.input`
 //     `;
 
 
-
+//기본 인 풋 박스
 const EmailInput = styled.input`
+  font-size: 14px;
+  height: 48px;
+  background: #fff;
+  line-height: 16px;
+  border: 1px solid #acacac;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 2px 8px;
+  border-radius: 2px;
+  appearance: none;
+    outline: none;
+`;
+
+//전화번호 입력
+const PhoneInput = styled.input`
   font-size: 14px;
   height: 48px;
   background: #fff;
@@ -665,19 +751,32 @@ const InputTextSizeWTypeL = styled.div`
   width: 100%;
   margin-top: 10px;
   text-align: left;
+    
+`;
 
-    .idbutton{
-        width: 100px;
-        height: 50px;
-        //margin-right: 20px;
-        text-align: center;
-        //background-color: #1351f9;
-        background-color: transparent !important;
-        border: solid 1px #2e2e2e !important;
-        color: #4e4e4e !important;
-        /* border: 1px solid red; */
+
+const EmailsButton = styled.button`
+    width: 100px;
+    height: 50px;
+    //margin-right: 20px;
+    text-align: center;
+    //background-color: #1351f9;
+    background-color: transparent !important;
+    border: solid 1px #f4f4f4 !important;
+    color: #f4f4f4 !important;
+    /* border: 1px solid red; */
+
+    &:hover{
+        border: solid 1px #1351f9;
+        color: #1351f9;
+    }
+    
+    &:active{
+        border: solid 1px #ff27a3;
+        color: #ff27a3;
     }
 `;
+
 
 const FormError = styled.span`
   color: #ff27a3;
@@ -689,7 +788,9 @@ const FormError = styled.span`
     font-weight: 800;
 `;
 
+// 사용자 작성 구간
 const InputTextSizeW = styled.div`
+    
   &.formError {
     cursor: default !important;
   }
@@ -700,11 +801,32 @@ const InputTextSizeW = styled.div`
   vertical-align: middle;
   box-sizing: border-box;
     outline: none;
+    
 `;
 
 const FormBlockBody = styled.div`
   text-align: left;
 `;
+
+// 성별 박스
+const CustomSelect = styled.select`
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    text-align: left;
+    vertical-align: middle;
+    box-sizing: border-box;
+    outline: none;
+    height: 48px;
+`;
+
+
+const CustomOption = styled.option`
+    outline: none;
+    cursor:pointer;
+    
+`;
+
 
 const AsteriskRed = styled.em`
   color: #ff27a3;
@@ -802,7 +924,7 @@ const LoginTitle = styled.h2`
 const LoginSection = styled.section`
   text-align: center;
   //margin-top: 30px;
-  padding-bottom: 100px;
+  padding-bottom: 20px;
     
     
     .step-bar{
@@ -876,7 +998,6 @@ const WrapLogin = styled.div`
   //min-height: 100%;
     padding: 40px 40px;
   background:  rgba(11, 11, 13, 0.8);
-    font-size: calc(6px + 0.5vw);
 `;
 
 export default SignUp;

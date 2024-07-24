@@ -7,7 +7,25 @@ import Login from './pages/Login/Login';
 import SignUp from './pages/Login/SignUp';
 // import GoogleAPI from './pages/Login//users/login';
 
+import ChangePassword from './pages/Login/ChangePassword';
+import FindIdPassword from './pages/Login/FindIdPassword';
+import WithdrawMember from './pages/Login/WithdrawMember';
 
+import PostList from "./pages/Post/PostList";
+import PostView from "./pages/Post/PostView";
+
+
+
+
+// const Layout = () => {
+//     return (
+//         <div>
+//             <Navs />
+//             <Main />
+//             <Footer />
+//         </div>
+//     );
+// };
 
 
 
@@ -16,10 +34,29 @@ const Router = () => {
         <BrowserRouter>
             <Navs />
             <Routes>
-                <Route index path="/" element={<Main />} />
-                <Route path="/login" element={<Login />} />
+                {/*<Route index path="/" element={<Layout />} />*/}
+                <Route index path="/main" element={<Main />} />
                 {/*<Route path="/users/login" element={<GoogleAPI />} />*/}
+                <Route path="/login" element={<Login />} />
                 <Route path="/signUp" element={<SignUp />} />
+
+                {/*비밀번호 변경*/}
+                <Route path="/user/changePassword" element={<ChangePassword />} />
+
+
+                {/*아이디 찾기/비밀번호재설정*/}
+                <Route path="/findIdPassword" element={<FindIdPassword />} />
+
+
+
+
+                <Route path="/user/withdrawMember" element={<WithdrawMember />} />
+
+
+
+                <Route path='/user/notice' element={<PostList />}  />
+                <Route path='/user/notice/:boardId' element={<PostView />}  />
+
 
                 {/*<Route path="/seats" elememt={<Seats />} />*/}
                 {/*<Route path="/chart" element={<Chart />} />*/}

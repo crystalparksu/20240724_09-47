@@ -1,0 +1,99 @@
+.admin_notice_div{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.admin_notice_haed{
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* border: 1px solid red; */
+}
+.admin_notice_haed h2{
+    font-size: 2rem;
+}
+.notice_link{
+    width: 100%;
+    /* border: 1px solid red; */
+    text-align: right;
+    font-size: 0.8rem;
+}
+
+/* 공지사항 리스트 */
+.admin_notice_list_menu{
+    width: 100%;
+}
+
+.admin_notice_list{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.admin_notice_list_ul{
+    width: 90%;
+    display: flex;
+    text-align: center;
+    border-bottom: 1px dashed rgb(158, 158, 158);
+}
+
+
+.admin_notice_list_ul li{
+    line-height: 30px;
+    border-right: 1px solid rgb(158, 158, 158);
+    margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.admin_notice_list_ul li:first-child{
+    width: 10%;
+}
+.admin_notice_list_ul li:nth-child(2){
+    width: 70%;
+}
+.admin_notice_list_ul li:last-child{
+    width: 20%;
+    border-right: none;
+    
+}
+
+.admin_notice_list .admin_notice_list_ul:last-child{
+    border-bottom: none;
+}
+
+
+/* ============================ 리스트 페이지 ========================== */
+
+.admin_notice_page{
+    width: 90%;
+}
+
+.admin_notice_page_ul{
+    width: 40%;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.admin_notice_page_ul li{
+    width: 30px;
+    text-align: center;
+    border-right: 1px solid rgb(158, 158, 158);
+    /* border: 1px solid red; */
+}
+.admin_notice_page_ul li:last-child{
+    border-right: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -75,7 +75,7 @@ function Navs() {
 
                  <MenuName
                     onClick={() => {
-                        goToPage('/main');
+                        goToPage('/');
                     }}
                     scrollposition={scrollPosition}
                 >
@@ -85,17 +85,16 @@ function Navs() {
 
                 <MenuName
                     onClick={() => {
-                        goToPage('/main');
+                        goToPage('/movie');
                     }}
                     scrollposition={scrollPosition}
                 >
                     MOVIE
                 </MenuName>
 
-
                 <MenuName
                     onClick={() => {
-                        goToPage('/main');
+                        goToPage('user/notice');
                     }}
                     scrollposition={scrollPosition}
                 >
@@ -105,7 +104,7 @@ function Navs() {
 
                 <MenuName
                     onClick={() => {
-                        goToPage('/main');
+                        goToPage('/mypage');
                     }}
                     scrollposition={scrollPosition}
                 >
@@ -115,12 +114,13 @@ function Navs() {
 
                 <MenuName
                     onClick={() => {
-                        goToPage('/main');
+                        goToPage('/admin');
                     }}
                     scrollposition={scrollPosition}
                 >
                     ADMIN
                 </MenuName>
+
 
                 <MenuName
                     onClick={() => {
@@ -165,7 +165,6 @@ function Navs() {
 
 
                 <IconWrapper>
-
                 <IconImg
                     onClick={() => goToPage('/login')}
                     alt="loginIcon"
@@ -173,6 +172,7 @@ function Navs() {
                     scrollposition={scrollPosition}
                 />
                 <IconImg
+                    onClick={() => goToPage('/SignUp')}
                     alt="mypageIcon"
                     src={mypageIcon}
                     scrollposition={scrollPosition}

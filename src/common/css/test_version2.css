@@ -1,0 +1,85 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    list-style: none;
+    text-decoration: none;
+}
+
+a{
+    color: black;
+}
+
+img{
+    width: 200px;
+    
+}
+body{
+    
+    width: 1200px;
+}
+/* ====================== tab-menu ================================= */
+
+.tab_wrapper{
+    width: 600px;
+}
+
+.tab-menu-ul{
+    display: flex;
+
+}
+.tab-menu-ul li{
+    width: 150px;
+    border: 1px solid black;
+}
+.tab-menu-ul li a{
+    width: 150px;
+    border: 1px solid black;
+}
+
+
+/* ======================== tab-content ============================== */
+.stillcut_ul, .review_ul{
+    display: flex;
+    font-size: 1.2rem;
+}
+
+.review_ul li{
+    border: 1px solid black;
+}
+.review_writer{
+    width: 10%;
+}
+.review_content{
+    width:70%;
+    text-align: left;
+    padding: 5px;
+}
+.review_time{
+    width: 10%;
+}
+.review_star{
+    width: 10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

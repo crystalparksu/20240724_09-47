@@ -1,0 +1,33 @@
+
+/*공통 테이블 스타일*/
+.common-table {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    border-spacing: 0;
+    /*height: 500px;*/
+    background-color: #fff;
+    margin-top: 20px;
+}
+
+.common-table-header-column {
+    border-bottom: 1px solid #e8e8e8;
+    padding: 0;
+    font-size: 16px;
+    padding: 10px 5px;
+    font-weight: bold;
+}
+
+.common-table-row{
+
+}
+
+.common-table-row:hover {
+    background-color: #eceaea;
+    cursor: pointer;
+}
+
+.common-table-column {
+    /*padding: 10px 5px;*/
+    padding: 20px 20px;
+}

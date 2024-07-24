@@ -1,0 +1,165 @@
+/* 리스트 전체 영역 */
+.list_div{
+	width: 80%;
+	border: 1px solid black;
+	display: flex;
+	flex-direction: column;
+}
+
+.admin_member_list{
+	width: 95%;
+	text-align: center;
+}
+.admin_member_haed{
+	font-size: 2rem;
+}
+
+/* 리스트 영역 */
+.list{
+	width: 100%;
+	border-bottom: 1px dashed rgb(158, 158, 158);
+	display: flex;
+	justify-content: center;
+
+
+}
+.list li{
+	/* border: 1px solid red; */
+	height: 30px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-right: 1px solid rgb(158, 158, 158);
+
+}
+
+
+/* 세부 요소 */
+.checkbox{
+	width: 5%;
+}
+.mem_no{
+	width: 10%;
+}
+.mem_id{
+	width: 20%;
+}
+.mem_name{
+	width: 10%;
+}
+.mem_email{
+	width: 20%;
+}
+.mem_phone{
+	width: 15%;
+}
+.mem_gender{
+	width: 5%;
+}
+.mem_birth{
+	width: 10%;
+}
+.mem_role{
+	width: 10%;
+}
+.list li:first-child{
+	margin-left: 0px;
+}
+.list li:last-child{
+	border-right: none;
+}
+
+.list:nth-child(2n){
+	background-color: #d8d8d8;
+}
+
+.list:hover{
+	/* .list:nth-child(2n)보다 아래 있어야 함 */
+	background-color: #9efaf2;
+}
+.list.content{
+	/* .list:nth-child(2n)보다 아래 있어야 함 */
+	background: none;
+}
+
+/* ======================= 리스트 페이지 번호 ======================= */
+.list_number{
+	width: 90%;
+	display: flex;
+
+	margin-top: 10px;
+}
+
+.list_number_ul{
+	width: 40%;
+	display: flex;
+}
+
+.list_number_ul li{
+	width: 10%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* border: 1px solid rgb(158, 158, 158); */
+	border-right: 1px solid rgb(158, 158, 158);
+	/* border-left: 1px solid rgb(158, 158, 158); */
+}
+.list_number_ul li:last-child{
+	border-right: none;
+}
+
+
+/* ============================= 영화 검색 ============================= */
+
+
+.admmin_member_search_div{
+	width: 80%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: flex;
+	/* border: 1px solid black; */
+}
+
+/* 검색 구역 */
+.member_search_form{
+	margin-top: 10px;
+	width: 80%;
+	text-align: right;
+	/* border: 1px solid black; */
+}
+
+.member_search_form form{
+	display: flex;
+	justify-content: right;
+	align-items: center;
+
+}
+/* 검색 */
+.member_search_form form input[type="text"]{
+	width: 55%;
+	height: 20px;
+}
+
+.member_search_form form input[type="submit"]{
+	margin-left: 20px;
+	width: 25%;
+	/* height: 20px; */
+}
+
+/* 추가 삭제 버튼 */
+.member_edit_btn{
+	margin-top: 10px;
+	width: 20%;
+	/* border: 1px solid black; */
+	text-align: center;
+	display: flex;
+	justify-content: right;
+	align-self: center;
+
+}
+.member_edit_btn button{
+	width: 60%;
+	/* height: 20px; */
+}

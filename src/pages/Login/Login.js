@@ -1,13 +1,12 @@
 import axios from "axios";
 import React, { useState } from "react";
 import styled from "styled-components";
-
-// import google from "./continue_google_light.png";
-import google from "./continue_google_neutral.png";
-// import google from "./continue_google_black.png";
+import google from "./images/continue_google_neutral.png";
 
 
-import logo from "../../components/Nav/images/rock_w_logo.svg";
+
+
+
 
 
 // Logins-로그인
@@ -22,6 +21,13 @@ function Login() {
         username: username,
         password: password,
     };
+
+
+    // const handleGoogleLogin = () => {
+    //     window.location.href = 'http://localhost:8080/oauth2/authorization/google';
+    // };
+
+
 
 
     //axios.post - /auth/login
@@ -57,84 +63,87 @@ function Login() {
 
 //html
     return (
-        <>
-            <LoginWrap>
-                <LoginContainer>
-                    <LoginSigninContent>
-                        <BorderAndText>
-                            <LoginHeadText>로그인<br/>
-                                <span>Rock 계정으로 로그인</span>
-                            </LoginHeadText>
-                        </BorderAndText>
+        <LoginWrap>
+            <LoginContainer>
+                <LoginSigninContent>
 
-                        <EmailLoginContainer>
-                            <div>
-                                <EmailLoginInput
-                                    type="text"
-                                    id="username"
-                                    name="username"
-                                    value={username}
-                                    placeholder="아이디"
-                                    required
-                                    onChange={(e) => {
-                                        setUsername(e.target.value);
-                                    }}
+                    <BorderAndText>
+                        <LoginHeadText>로그인</LoginHeadText>
+                    </BorderAndText>
+
+                        <LoginHeadTexts>Rock 계정으로 로그인</LoginHeadTexts>
+                            {/*<span >Rock 계정으로 로그인</span>*/}
+
+
+
+                    <EmailLoginContainer>
+                        <div>
+                            <EmailLoginInput
+                                type="text"
+                                id="username"
+                                name="username"
+                                value={username}
+                                placeholder="아이디"
+                                required
+                                onChange={(e) => {
+                                    setUsername(e.target.value);
+                                }}
+                            />
+                            <EmailLoginInput
+                                type="text"
+                                id="password"
+                                name="password"
+                                value={password}
+                                placeholder="비밀번호"
+                                required
+                                onChange={(e) => {
+                                    setPassword(e.target.value);
+                                }}
+                            />
+                        </div>
+
+                        <EmailLoginOption>
+                            {/*아이디 저장*/}
+                            <div className="inputCheckbox">
+                                <input type="checkbox" id="id-save" className="input-id-save"
+                                       required
+                                       onChange={(e) => {
+                                           setUsername(e.target.checked.value)
+                                       }}
                                 />
-                                <EmailLoginInput
-                                    type="text"
-                                    id="password"
-                                    name="password"
-                                    value={password}
-                                    placeholder="비밀번호"
-                                    required
-                                    onChange={(e) => {
-                                        setPassword(e.target.value);
-                                    }}
-                                />
+                                <label for="id-save" className="label-id-save">아이디 저장</label>
                             </div>
-
-                            <EmailLoginOption>
-                                {/*아이디 저장*/}
-                                <div className="inputCheckbox">
-                                    <input type="checkbox" id="id-save" className="input-id-save"
-                                           required
-                                           onChange={(e) =>{
-                                               setUsername(e.target.checked.value)
-                                           }}
-                                    />
-                                    <label for="id-save" className="label-id-save">아이디 저장</label>
-                                </div>
-                                {/*아이디/비밀번호 찾기*/}
-                                <a href="/findIdPassword" className="find">아이디 찾기&nbsp;&nbsp;|&nbsp;&nbsp;비밀번호 찾기</a>
-                            </EmailLoginOption>
+                            {/*아이디/비밀번호 찾기*/}
+                            <a href="/findIdPassword" className="find">아이디 찾기&nbsp;&nbsp;|&nbsp;&nbsp;비밀번호 찾기</a>
+                        </EmailLoginOption>
 
 
-                            {/*로그인 버튼*/}
-                            <CommonButton
-                                type="button"
-                                onClick={() => {
-                                    onSubmit();
-                                    console.log("body: " + username + ", " + password);
-                                }}
-                            >
-                                <a>로그인</a>
-                            </CommonButton>
+                        {/*로그인 버튼*/}
+                        <CommonButton
+                            type="button"
+                            onClick={() => {
+                                onSubmit();
+                                console.log("body: " + username + ", " + password);
+                            }}
+                        >
+                            <a>로그인</a>
+                        </CommonButton>
 
 
-                            {/*회원가입 버튼*/}
-                            <SignupButton
-                                type="button"
-                                onClick={() => {
-                                    onSubmit();
-                                    console.log("body: " + username + ", " + password);
-                                }}
-                            >
-                                <a href="/SignUp">회원가입</a>
-                            </SignupButton>
+                        {/*회원가입 버튼*/}
+                        <SignupButton
+                            type="button"
+                            onClick={() => {
+                                onSubmit();
+                                console.log("body: " + username + ", " + password);
+                            }}
+                        >
+                            <a href="/SignUp">회원가입</a>
+                        </SignupButton>
 
 
-                            {/*구글 버튼*/}
-                            <LoginSignupContent>
+                        {/*구글 버튼*/}
+                        <LoginSignupContent>
                             <LogoImg
                                 alt="logo"
                                 src={google}
@@ -144,14 +153,15 @@ function Login() {
                                 }}
                             >
                             </LogoImg>
-                                </LoginSignupContent>
-                        </EmailLoginContainer>
-                    </LoginSigninContent>
-                </LoginContainer>
-            </LoginWrap>
-        </>
+                        </LoginSignupContent>
+                    </EmailLoginContainer>
+                </LoginSigninContent>
+            </LoginContainer>
+        </LoginWrap>
     );
 }
+
+
 
 
 //로그인 버튼
@@ -420,16 +430,19 @@ const BarButton = styled.button`
 `;
 
 const VerticalButtons = styled.div`
-  width: 100%;
+    width: 100%;
     display: flex;
     justify-content: center;
     z-index: 999;
-    a{
-        background: url("continue_google_neutral.png");
+
+    a {
+        background: url("images/continue_google_neutral.png");
         width: 756px;
         height: auto;
     }
 `;
+
+
 
 const BorderAndText = styled.div`
 margin: 0 auto;
@@ -438,15 +451,28 @@ margin: 0 auto;
     text-align: center;
     font-size: 32px;
     font-weight: 500!important;
+    margin-top: 20px;
     
-  span {
-    font-size: 18px;
-    margin-top: -8px;
-    width: 130px;
-    text-align: center;
-  }
+    
+  // span {
+  //   font-size: 18px;
+  //   //margin-top: -8px;
+  //   width: 100%;
+  //   text-align: center;
+  //     color: #fff;
+  //     font-size: 16px;
+  // }
+    
 `;
 
+const  LoginHeadTexts= styled.div`
+    font-size: 16px;
+    text-align: center;
+    color: #527fff;
+    margin-bottom: 40px;
+    line-height: 14px;
+    font-weight: 500;
+`;
 
 const SpIcon = styled.span`
     display: flex;
@@ -519,7 +545,7 @@ const Background = styled.span``;
 
 
 const LoginHeadText = styled.div`
-    margin: 0 0 30px;
+    margin-bottom: 10px;
     font-weight: 500;
     font-size: 32px;
     text-align: center;
@@ -547,7 +573,7 @@ const LoginContainer = styled.div`
       overflow: hidden;
       padding: 40px 0;
       margin: 80px auto;
-      //height: 580px;
+      height: 600px;
   }
 `;
 

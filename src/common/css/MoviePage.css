@@ -1,0 +1,252 @@
+.movie{
+    width: 1200px;
+    /* height: 100vh; */
+    /* border: 1px solid #fff; */
+    position: relative;
+    display: flex;
+    margin-top: 10px;
+
+}
+
+
+
+/* 뒷 배경 */
+.movie_bg{
+    /* z-index: -10; */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    /* z-index: -1; */
+}
+
+.book_mark{
+    position: absolute;
+    right: calc(0% + 20px);
+    top: calc(0% + 10px);
+}
+
+.book_mark button{
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    padding: 0px;
+    font-size: 50px;
+    line-height: 50px;
+    
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+    /* border: 1px solid red; */
+}
+
+/* 영화 상세 설명 */
+.movie_explain{
+    width: 60%;
+    /* border: 1px solid #fff; */
+    display: flex;
+    margin: 0;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 90%, rgba(255,255,255,0) 100%);
+    z-index: 1;
+
+}
+.explainDiv{
+    width: 100%;
+}
+.explain{
+    width: 100%;
+    /* border: 1px solid white; */
+}
+.explainUl li{
+    width: 95%;
+    margin: 10px;
+}
+.movieTitle{
+    text-align: center;
+    font-size: 2rem;
+    /* border: 1px solid red; */
+}
+.movieDirector ul{
+    display: flex;
+    overflow-x: auto;
+}
+.movie_actor ul{
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    /* overflow: hidden; */
+    overflow-x: auto;
+    
+}
+
+.MovieDirectorImg, .MovieActorImg{
+    width: 100px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #4d7381;
+}
+
+
+
+
+
+
+/* 탭 메뉴 영역 */
+.tabDiv{
+    width: 100%;
+}
+.tabMenu{
+    display: flex;
+    width: 100%;
+    /* border: 1px solid red; */
+}
+.tab{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+.tab:first-child{
+    margin-right: 10px;
+}
+.tab.active{
+    border-radius: 10px;
+    /* border: 1px solid rgb(68, 69, 119); */
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #002244 30%, #002244 70%, rgba(0, 0, 0, 0) 100%);
+    /* color: black; */
+}
+
+
+
+/* 탭 내용 영역 */
+.tab-content{
+    width: 100%;
+    /* 높이 강제로 정함 */
+    height: 250px;
+
+    margin-top: 10px;
+    /* border: 1px solid red; */
+    /* margin-bottom: 10px; */
+    text-align: center;
+    display:  flex;
+    flex-direction: column;
+}
+
+
+/* 리뷰 */
+
+.review_ul{
+    width: 90%;
+    display: flex;
+    /* border: 1px solid red; */
+}
+.review_ul li{
+    margin-top: 10px;
+    /* border: 1px solid red; */
+}
+
+/* 각 리뷰 내용 사이즈 */
+.reviewWriter{
+    width: 15%;
+    text-overflow: ellipsis;
+    display: flex;
+    align-items: center;
+}
+.reviewContent{
+    width: 58%;
+    text-overflow: ellipsis;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reviewTime{
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reviewStar{
+    width: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.reviewDelete{
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviewDeleteBtn{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    color: white;
+    border-radius: 5px;
+
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    /* border: 1px solid red; */
+}
+
+.reviewDeleteBtn:hover{
+    border: 1.5px solid #0080ff;
+    background-color: #002244;
+}
+
+/* 리뷰 페이지 번호 창 */
+.review_no{
+    margin-top: 10px;
+    width: 70%;
+}
+
+
+
+
+.review_no_ul{
+    width: 100%;
+    display: flex;
+}
+
+.review_no_ul li{
+    width: 10%;
+    /* border: 1px solid red; */
+}
+
+/* 예고편 */
+#preview_div{
+    width: 95%;
+    text-align: center;
+    /* border: 1px solid red; */
+}
+
+/* 배경을 위한 빈공간 */
+.bg{
+    width: 50%;
+}
+
+
+/* 재생 버튼 */
+.watch_movie_btn{
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+}
+.button{
+    
+    position: absolute;
+    bottom: 7%;
+    left: 73%;
+}
+.watch_movie_btn:hover{
+    background-color: #30fff5;
+}
+.watch_movie_btn:active{
+    background-color: #02abb1;
+}
+
+
+

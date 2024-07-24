@@ -86,7 +86,7 @@ const Overlay = styled.div`
   width: 300px;
   height: 430px;
   border-radius: 10px;
-  background: rgb(254,107,12,0.3);
+  background: #1351f9;
   backdrop-filter: blur(20px);
   animation: ${fadeIn} 0.1s ease-out;
   z-index: 100;
@@ -111,7 +111,7 @@ const OverlayBtn = styled.button`
   margin-top: 30px;
   border: 0px;
   
-  background: #FE6B0C;
+  background: #1351f9;
   color: white;
   font-size: 16px;
   font-weight: 600;

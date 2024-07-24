@@ -1,0 +1,198 @@
+
+
+/* ============================ 랭킹 슬라이드 ================================ */
+.ranking{
+    width: 1200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.slide{
+    z-index: 0;
+    position: relative;
+}
+.img_slide{
+    width: 1200px;
+    height: 400px;
+
+}
+.slide_page{
+    display: flex;
+    overflow: hidden;
+
+    /* z-index: -1; */
+}
+
+.slide_ul{
+    display: flex;
+    transition: 0.3s;
+}
+.btn{
+    /* z-index: 1; */
+    position: absolute;
+}
+
+/* 버튼 css */
+.next, .prev{
+    border-style: none;
+    width: 100px;
+    height: 70px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    transition: 0.3s;
+    background-color: rgba(0, 187, 255, 0.2);
+}
+
+
+
+/* 버튼 hover시 색 변경 */
+.next:hover, .prev:hover{
+    background-color: #22c0ff;
+}
+.next{
+    right: 0;
+    top: calc(50% - 35px);
+}
+
+.prev{
+    left: 0;
+    top: calc(50% - 35px);
+}
+
+/* 순위 출력  */
+.ranking_no{
+    text-align: center;
+    position: absolute;
+    left: calc(0%);
+    bottom: calc(5%);
+    width: 100%;
+    height: 35px;
+    font-size: 1.2rem;
+    line-height: 35px;
+    /* border: 1px solid white; */
+    background-color: rgba(179, 179, 179, 0.7);
+}
+.indicator {
+    cursor: pointer;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/* 영화 설명 css */
+figure{
+    position: relative;
+}
+figcaption{
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    left: calc(110px);
+    top: calc(10%);
+    /* border: 1px solid black; */
+    background-color: rgba(179, 179, 179, 0.7);
+    padding: 10px;
+
+}
+.movie_title{
+    /* font-size: 2rem; */
+    text-align: center;
+}
+.movie_content, .movie_genre, .movie_time{
+    /* font-size: 1.2rem; */
+}
+
+
+/* ============================ 영화 별점 추천 ================================ */
+.movie_img{
+    width: 1200px;
+    margin-bottom: 10px;
+    
+}
+.movie_list{
+    display: flex;
+    
+}
+.movie_list li{
+    position: relative;
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.MainPageListHead{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgb(12, 9, 53) 15%, rgb(31, 66, 119) 75%, rgba(255, 255, 255, 0) 100%);
+}
+.MainMoviePoster{
+    width: 200px;
+    height: 300px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* 포스터 제목 css */
+.movie_list li a::after{
+    content: "반지의 제왕";
+    text-align: center;
+    width: 200px;
+    height: 100px;
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    position: absolute;
+    transition: 0.5s;
+    bottom: -40%;
+    left: 0%;
+
+}
+/* 포스터 hover시 제목 올라오는 효과*/
+.movie_list li:hover ::after{
+    bottom: 0%;
+}
+
+/* 포스터 hover시 포스터가 올라가고 뒤에 그림자 효과 */
+.movie_list_poster:hover{
+    transition: 0.3s;
+    transform: translateY(-10px);
+    box-shadow: 5px 5px 10px rgb(255, 255, 255);
+}
+
+.movie_poster{
+    transition: 0.3s;
+    transform: scale(1);
+}
+
+.movie_list_poster:hover .MainMoviePoster{
+    /* transition: 0.3s; */
+    border: 2px solid rgb(0, 0, 0);
+}
+
+
+/* ============================ 영화 리뷰 추천 ================================ */
+
+
+
+
+
+/* ============================ 최신 업로드된 영화 ================================ */
+
+
+
+
+
+
+
+
+
+
