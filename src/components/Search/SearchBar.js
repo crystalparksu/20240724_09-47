@@ -19,7 +19,10 @@ function SerarchBar({ search,onClick,onChange }) {
                     onChange={onChange}
                 />
 
-                <button type="button" className="search_icon" onClick={onClick} onChange={onChange}>
+                <button type="button"
+                        className="search_icon"
+                        onClick={onClick}
+                        onChange={onChange}>
                     <i class="fas fa-search"></i>
                     {/*<BiSearchAlt2 className="search_icon"></BiSearchAlt2>*/}
                 </button>

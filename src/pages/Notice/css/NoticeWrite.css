@@ -1,0 +1,107 @@
+.NoticeWrite{
+    width: 1024px;
+    margin: 0 auto;
+    /* border: 1px solid white; */
+    display: flex;
+    align-items: center;
+}
+
+.writeForm{
+    width: 1024px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+
+}
+.WritetTitle{
+    padding-top: 74px;
+    width: 1024px;
+    height: 38px;
+
+    margin-top: 20px;
+    /* border: 1px solid white; */
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    width: 1024px;
+    padding-bottom: 16px;
+    padding-left: 46px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-image: initial;
+    /*border-bottom: 1px solid rgb(176, 184, 193);*/
+    outline: none;
+    caret-color: rgb(49, 130, 246);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 130%;
+    color: rgb(78, 89, 104);
+    min-height: 32px;
+}
+
+
+.WritetTitle input{
+    width: 1024px;
+    height: 40px;
+    /*border-radius: 5px;*/
+    border-top: 1px solid rgba(201, 201, 201, 0.6);
+    border-bottom: 1px solid rgba(201, 201, 201, 0.6);
+    border: none;
+    outline: none;
+    padding: 0;
+    font-size: 15px;
+    padding: 15px 5px;
+    font-weight: 500;
+    /* text-align: left; */
+    /* padding-left: 20px; */
+    background-color: #e5e8eb;
+    color: #0f2027;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+}
+
+
+.WritetTitle input:focus{
+    /*border: 1px solid #2272eb;*/
+    height: 37px;
+}
+
+.WriteText{
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+
+}
+
+/*.WriteText textarea{*/
+/*    width: 80%;*/
+/*    height: 500px;*/
+/*    border-radius: 5px;*/
+/*    resize: none;*/
+/*    border: none;*/
+/*    outline: none;*/
+/*}*/
+/*.WriteText textarea:focus{*/
+/*    box-shadow: 0px 0px 15px rgb(20, 216, 241);*/
+/*}*/
+
+/* 글쓰기 버튼 */
+.WriteSubmit{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.WriteSubmit input{
+    width: 200px;
+    height: 50px;
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,68 @@
+
+
+.pagination{
+    -webkit-box-pack: center;
+    justify-content: center;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 1044px;
+    color: #d1d6db;
+
+    margin: 40px auto;
+    box-sizing: border-box;
+
+    /*폰트 관련*/
+    font-size: 18px;
+    color: #000;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 20px;
+    font-weight: 500;
+    font-family: 'SUIT-Regular' !important;
+    padding: 40px 40px;
+    letter-spacing: 0.5px;
+    padding: 10px;
+    /*border-top: 3px solid #186ead;*/
+    /*border-bottom: 3px solid #186ead;*/
+    /*background-color: rgba(0, 0, 0, 0.4);*/
+
+}
+
+/*호버 시 */
+/*.pagination:hover{*/
+/*    border-radius: 100%;*/
+/*    color: white;*/
+/*    background-color: #263a6c;*/
+/*    text-decoration-line: underline;*/
+/*}*/
+
+/*.pagination:active{*/
+/*    text-decoration-line: underline;*/
+
+/*}*/
+
+
+.pagination a{
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*.pagination a:active,:hover,:focus,:visited,:target{*/
+
+.pagination a:focus{
+    background-color: #e5e8eb;
+    border-radius: 18px;
+    color: #6b7684;
+    font-size: 17px;
+    font-weight: 600;
+    height: 36px;
+    min-width: 36px;
+    padding: 0 6px;
+}

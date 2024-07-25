@@ -1,21 +1,33 @@
 
 /*공통 테이블 스타일*/
 .common-table {
-    width: 1200px;
+    width: 1044px;
     margin: 0 auto;
     text-align: center;
     border-spacing: 0;
     /*height: 500px;*/
     background-color: #fff;
     margin-top: 20px;
+    margin-bottom: 48px;
 }
+/*tr{*/
 
+/*}*/
+
+/*맨위*/
 .common-table-header-column {
-    border-bottom: 1px solid #e8e8e8;
+    border-top: 1px solid rgba(201, 201, 201, 0.6);
+    border-bottom: 1px solid rgba(201, 201, 201, 0.6);
     padding: 0;
-    font-size: 16px;
-    padding: 10px 5px;
-    font-weight: bold;
+    font-size: 15px;
+    padding: 15px 5px;
+    font-weight: 500;
+    /*text-align: left;*/
+    /*padding-left: 20px;*/
+    background-color: #e5e8eb;
+
+    color: #0f2027;
+    -webkit-font-smoothing: antialiased;
 }
 
 .common-table-row{
@@ -23,11 +35,15 @@
 }
 
 .common-table-row:hover {
-    background-color: #eceaea;
+    background-color: #EAF3FE;
     cursor: pointer;
 }
 
+/*내용물*/
 .common-table-column {
     /*padding: 10px 5px;*/
     padding: 20px 20px;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'SUIT-Regular' !important;
 }

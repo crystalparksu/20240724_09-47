@@ -1,0 +1,21 @@
+
+ojavascript:S1128"&Remove this unused import of 'Button'.(ÛÂ³Ë8ÂûÉ2J$deeda322-7928-492d-954a-054518e0094d
+sjavascript:S1128"*Remove this unused import of 'FormSelect'.(ÛÂ³Ë8ŸÂûÉ2J$ffed9e03-049f-477f-a05f-36af4482aa7d
+|javascript:S1128".Remove this unused import of 'SelectorEngine'.(Ô‚‚ìûÿÿÿÿ8ŸÂûÉ2J$293f133c-cc11-4687-8ca9-cc8ae3ff0490
+ˆjavascript:S1481":Remove the declaration of the unused 'nameValue' variable.(Áûùşÿÿÿÿ8ŸÂûÉ2J$fd305a15-9e3a-4c57-ab2f-6ab66288bc7d
+…javascript:S1854"7Remove this useless assignment to variable "nameValue".(Áûùşÿÿÿÿ8ŸÂûÉ2J$e3bd4183-1d5a-4a49-bea0-9888c52fb453
+‹javascript:S1481"=Remove the declaration of the unused 'contentValue' variable.(Áûùşÿÿÿÿ8ŸÂûÉ2J$f6efbdaf-176e-43c6-a298-cdd41eda17c1
+ˆjavascript:S1854":Remove this useless assignment to variable "contentValue".(Áûùşÿÿÿÿ8ŸÂûÉ2J$0bc41fcb-878a-46d6-bcb6-25bef91a6516
+gjavascript:S125x"Remove this commented out code.(¾ØÖ§8 ÂûÉ2J$baf6d036-e157-46eb-b033-02f94d492312
+ljavascript:S125{"Remove this commented out code.(ñ¥ùšøÿÿÿÿ8 ÂûÉ2J$6a1631c1-5f5d-4a75-a477-40db360890aa
+xjavascript:S3504Š")Unexpected var, use let or const instead.(­„Ü“øÿÿÿÿ8 ÂûÉ2J$6482a724-fb4e-4c47-9dc7-9d3302d7d43e
+yjavascript:S5869‹"*Remove duplicates in this character class.(¶ÂÃßıÿÿÿÿ8 ÂûÉ2J$58dcc953-3e38-447c-9b9e-8f854e684942
+pjavascript:S6535‹"!Unnecessary escape character: \..(¶ÂÃßıÿÿÿÿ8¡ÂûÉ2J$37ef9907-fb00-4cf7-98be-3a026d901d77
+yjavascript:S5869‹"*Remove duplicates in this character class.(¶ÂÃßıÿÿÿÿ8¡ÂûÉ2J$276bc856-9f27-4b6b-986c-493792f7c783
+yjavascript:S5869‹"*Remove duplicates in this character class.(¶ÂÃßıÿÿÿÿ8¢ÂûÉ2J$538b14fc-f7d7-490f-ad93-7ce35e7cb899
+pjavascript:S6535‹"!Unnecessary escape character: \..(¶ÂÃßıÿÿÿÿ8¢ÂûÉ2J$80a055d0-a9b8-4ab8-895b-3f6f67af3da4
+yjavascript:S5869‹"*Remove duplicates in this character class.(¶ÂÃßıÿÿÿÿ8¤ÂûÉ2J$ede45e18-a0e7-4c50-916c-adb9c3347aac
+yjavascript:S5869‹"*Remove duplicates in this character class.(¶ÂÃßıÿÿÿÿ8¤ÂûÉ2J$c8c67866-d0a1-40b3-896f-d9d4e4ea07bc
+javascript:S6644«">Unnecessary use of boolean literals in conditional expression.(Ùü§ÿÿÿÿÿ8¤ÂûÉ2J$8daec33a-4923-4c91-8706-f5b9d2d0d6ff
+javascript:S6644¾">Unnecessary use of boolean literals in conditional expression.(“Şš—úÿÿÿÿ8¤ÂûÉ2J$33ce9b94-843d-4671-9bdc-c8d0a83b08c9
+hjavascript:S125¿"Remove this commented out code.(Çñ½Ü8¤ÂûÉ2J$fb3189f0-80bf-4005-a9bd-3827d077db1f

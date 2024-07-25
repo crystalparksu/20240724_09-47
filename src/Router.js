@@ -11,9 +11,9 @@ import ChangePassword from './pages/Login/ChangePassword';
 import FindIdPassword from './pages/Login/FindIdPassword';
 import WithdrawMember from './pages/Login/WithdrawMember';
 
-import PostList from "./pages/Post/PostList";
-import PostView from "./pages/Post/PostView";
-
+import NoticeList from "./pages/Notice/NoticeList";
+import NoticeView from "./pages/Notice/NoticeView";
+import NoticeWrite from "./pages/Notice/NoticeWrite";
 
 
 
@@ -35,7 +35,7 @@ const Router = () => {
             <Navs />
             <Routes>
                 {/*<Route index path="/" element={<Layout />} />*/}
-                <Route index path="/main" element={<Main />} />
+                <Route index path="/" element={<Main />} />
                 {/*<Route path="/users/login" element={<GoogleAPI />} />*/}
                 <Route path="/login" element={<Login />} />
                 <Route path="/signUp" element={<SignUp />} />
@@ -46,17 +46,14 @@ const Router = () => {
 
                 {/*아이디 찾기/비밀번호재설정*/}
                 <Route path="/findIdPassword" element={<FindIdPassword />} />
-
-
-
-
                 <Route path="/user/withdrawMember" element={<WithdrawMember />} />
 
+                {/*공지사항*/}
+                <Route path='/user/notice' element={<NoticeList />}  />
+                <Route path='/user/notice/:boardId' element={<NoticeView />}  />
 
-
-                <Route path='/user/notice' element={<PostList />}  />
-                <Route path='/user/notice/:boardId' element={<PostView />}  />
-
+                {/*글쓰기 버튼 클릭 시,*/}
+                <Route path='/admin/notice/write' element={<NoticeWrite />}  />
 
                 {/*<Route path="/seats" elememt={<Seats />} />*/}
                 {/*<Route path="/chart" element={<Chart />} />*/}

@@ -8,7 +8,7 @@ import searchIcon from './images/icon_search.png';
 import loginIcon from './images/icon_login.png';
 import mypageIcon from './images/icon_mypage.png';
 import useFetch from '../../Hooks/useFetch';
-import search from './images/search.svg';
+import search from './images/search.png';
 
 
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -56,6 +56,7 @@ function Navs() {
     const filteredRecommendData = recommendData.movies.filter(item =>
         item.name.replace(' ', '').includes(searchInput)
     );
+
 
 
     //HTML
