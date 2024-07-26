@@ -2,8 +2,7 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-// import '../../common/css/FindIdPassword.css';
-// import "../Login/css/FindIdPassword.css";
+
 
 
 

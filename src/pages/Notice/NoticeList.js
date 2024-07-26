@@ -189,13 +189,19 @@ const Header = styled.div`
     }
     //글쓰기 버튼
     .botom_write{
-    width: 100px;
-    height: 50px;
+        width: 90px;
+        height: 45px;
         border: 1px solid #cccccc;
-        float: right;
-        border-radius: 5px;
-        margin-top: 2px;
+        border-radius: 2px;
         background-color: #e5e8eb;
+        
+        float: right;
+       
+        margin-top: 2px;
+       
+        position: relative;
+        bottom: -10px;
+        
         
         &:hover {
             cursor: pointer;
@@ -205,7 +211,7 @@ const Header = styled.div`
     }
     
     .botom_write a{
-        font-size: 16px;
+        font-size: 14px;
         color: #0f2027;
         //padding: 10px 25px;
         text-align: center;
@@ -224,7 +230,7 @@ const Header = styled.div`
 
 const Wrap = styled.div`
     width: 100%;
-    height: 100vh;
+    //height: 100vh;
     position: relative;
     margin: 0 auto;
     //padding: 40px 40px;

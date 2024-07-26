@@ -1,26 +1,12 @@
 import React, {useState} from "react";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import axios from 'axios';
-import './css/NoticeWrite.css';
+// import './css/NoticeWrite.css';
 import styled from "styled-components";
 
 
-
-const Wrap = styled.div`
-    width: 100% ;
-    height: 100vh;
-    position: relative;
-    margin: 0 auto;
-    //padding: 40px 40px;
-    //background: rgb(255,255,255);
-    background: #fff;
-    display: inline-block;
-`;
-
-
-
 //공지사항 글쓰기
-function NoticeWritePage() {
+function NoticeWrite() {
 
     //변수
     const [boardTitle, setBoardTitle] = useState('');
@@ -111,18 +97,26 @@ function NoticeWritePage() {
     };
 
 
-
     //HTML
-    return(
+    return (
 
         <Wrap>
-            <div className="NoticeWrite">
-                <form className="writeForm"
-                      onSubmit={handleSubmit}>
+            <FromNoticeWrap>
+                <Header className="name">
+                    <Link to={`/user/notice/`}>
+                        게시판
+                    </Link>
+                </Header>
 
-                    {/* 제목 */}
-                    <div className="WritetTitle">
-                        <input
+                {/*폼 기능*/}
+                <FormWrite onSubmit={handleSubmit}>
+
+                    <InputTextSizeWTypeL>
+                        {/* 제목 폼 */}
+                        <FormBlockHead>
+                            <AsteriskRed></AsteriskRed>제목
+                        </FormBlockHead>
+                        <InputWrite
                             type="text"
                             id="title"
                             name="title"
@@ -131,48 +125,364 @@ function NoticeWritePage() {
                             value={boardTitle}
                             onChange={handleTitleChange}
                         />
-                    </div>
-
-                    {/* 내용 */}
-                    <div className="WriteText">
-                    <textarea
-                        name="content"
-                        id="content"
-                        cols="40"
-                        rows="10"
-                        required
-                        value={boardContent}
-                        onChange={handleContentChange}
-                    ></textarea>
-                    </div>
+                        <FormBlockHead>
+                            <AsteriskRed></AsteriskRed>작성일
+                        </FormBlockHead>
+                        {/* 등록일 폼 */}
+                        <InputDate
+                            type="date"
+                            id="date"
+                            name="date"
+                            required
+                        />
+                    </InputTextSizeWTypeL>
 
 
-                    {/* 첨부파일 버튼 */}
-                    {fileInputs.map((input, index) => (<div className="FileUpload" key={index}>
-                            <input
-                                type="file"
-                                id={`file_${index}`}
-                                name={`file_${index}`}
-                                onChange={(e) => handleFileChange(index, e)}
-                            />
-                            <button type="button" onClick={() => removeFileInput(index)}>삭제</button>
-                        </div>))}
+                    <FormBlock>
+                        {/* 내용 */}
+                        <FormBlockHead>
+                            <AsteriskRed></AsteriskRed>내용
+                        </FormBlockHead>
+
+                            {/* 내용 폼 */}
+                            <TextWrite
+                                name="content"
+                                id="content"
+                                cols="auto"
+                                rows="auto"
+                                required
+                                placeholder="내용을 입력하세요"
+                                value={boardContent}
+                                onChange={handleContentChange}
+                            ></TextWrite>
+
+                    </FormBlock>
 
 
-                    {/* 추가 파일 업로드 버튼 */}
-                    <div className="AddFileUpload">
-                        <button type="button" onClick={addFileInput}>파일 추가</button>
-                    </div>
+
+                    <FormBlockFiles>
+                            {fileInputs.map((input, index) => (
+
+                                <div className="filebox" key={index}>
+
+                                    {/* 파일 선택 */}
+                                    <label
+                                        htmlFor="file_0">파일</label>
+
+                                    <input type="file"
+                                           id={`file_${index}`}
+                                           name={`file_${index}`}
+                                           onChange={(e) => handleFileChange(index, e)}
+                                    />
 
 
-                    {/* 글쓰기 버튼 */}
-                    <div className="WriteSubmit">
-                        <input type="submit" value="글쓰기" className="submit"/>
-                    </div>
+                                    {/* 파일 삭제 */}
+                                    <label
+                                        htmlFor="del">삭제</label>
 
-                </form>
-            </div>
-        </Wrap>);
+                                    <button
+                                        className="removeFile"
+                                        type="button"
+                                           onClick={() => removeFileInput(index)}삭제 />
+
+                                    {/*<button*/}
+                                    {/*    className="removeFile"*/}
+                                    {/*    type="button"*/}
+                                    {/*    onClick={() => removeFileInput(index)}>삭제*/}
+                                    {/*</button>*/}
+
+                                </div>))}
+                    </FormBlockFiles>
+
+                    {/*<button*/}
+                    {/*    className="AddFileUpload"*/}
+                    {/*    type="button"*/}
+                    {/*        onClick={addFileInput}>파일 추가</button>*/}
+
+
+                    {/*/!* 글쓰기 버튼 *!/*/}
+                    {/*<div className="WriteSubmit">*/}
+                            {/*    <input type="submit" value="글쓰기" className="submit"/>*/}
+                            {/*</div>*/}
+
+                </FormWrite>
+            </FromNoticeWrap>
+        </Wrap>
+);
 }
+export default NoticeWrite;
 
-export default NoticeWritePage;
+
+// style
+
+//파일 전체 버튼
+const InputFile = styled.input`
+    width: 90px;
+    height: 45px;
+    border: 1px solid #cccccc;
+    
+    font-size: 14px;
+    color: #0f2027;
+    //padding: 10px 25px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+`;
+    
+    
+const FormBlockFiles = styled.div`
+    //사이즈
+    width: 1024px;
+    height: 45px;
+    
+    //여백
+    margin-bottom: 48px;
+    margin-left: 40px;
+    margin-top: 40px;
+
+    //구도
+    display: flex;
+
+    //삭제 버튼
+.removeFile{
+    
+    
+}
+    .filebox{
+    
+        
+    }
+    .filebox label {     /* 파일 필드*/
+        margin-right: 20px;
+        
+        display: inline-block;
+        padding: .5em .75em;
+        color: #0f2027;
+        font-size: 14px;
+        line-height: 30px;
+        text-align: center;
+        vertical-align: middle;
+        background-color: #fdfdfd;
+        cursor: pointer;
+        border: 1px solid #ebebeb;
+  
+        
+    //사이즈
+        width: 90px;
+        height: 45px;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        background-color: #fff;
+
+        &:hover {
+            cursor: pointer;
+            //border: 2px solid rgb(51, 61, 75);
+            background-color:  #3182f6;;
+            color: #fff;
+        }
+        
+    }
+    .filebox input[type="file"] {  /* 파일 필드 숨기기 */
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip:rect(0,0,0,0);
+        border: 0;
+    }
+`;
+
+
+
+
+
+
+//전체
+const Wrap = styled.div`
+width: 100%;
+//height: 100vh;
+position: relative;
+margin: 0 auto;
+//padding: 40px 40px;
+//background: rgb(255,255,255);
+background: #fff;
+display: inline-block;
+`;
+//감싸는 전체
+const FromNoticeWrap = styled.div`
+width: 1024px;
+position: relative;
+margin: 0 auto;
+background: #fff;
+margin-bottom: 48px;
+padding-top: 40px;
+`;
+//제목감싸는 박스
+const Header = styled.div`
+width: 1024px;
+margin: 0 auto;
+//background: red;
+font-family: 'SUIT-Regular' !important;
+color: rgb(51, 61, 75);
+font-size: 36px;
+font-weight: 800;
+text-align: left;
+`;
+//제목+ 등록 폼 감싸는 박스
+const InputTextSizeWTypeL = styled.div`
+box-sizing: border-box;
+vertical-align: middle;
+height: 48px;
+display: flex;
+width: 1024px;
+margin-top: 1px;
+text-align: left;
+`;
+//폼 시작 전 글씨 스타일
+// 모든 폼 폰트 사이즈
+const FormBlockHead = styled.h3`
+font-size: 16px;
+color: #0f2027;
+line-height: 40px;
+//text-indent: 5px;
+font-family: 'SUIT-Regular' !important;
+font-weight: 200;
+//text-indent: px;
+margin-right: 10px;
+text-align: left;
+`;
+const AsteriskRed = styled.em`
+color: #ff27a3;
+font-size: 12px;
+display: inline-block;
+`;
+
+//등록폼
+const InputDate = styled.input`
+width: 200px;
+height: 40px;
+//margin-left: 40px;
+border: none;
+outline: none;
+display: flex;
+justify-content: right;
+float: right;
+/*폰트 디자인*/
+padding: 15px 5px;
+text-indent: 10px;
+font-size: 13px;
+font-weight: 500;
+background-color: #fff;
+-webkit-font-smoothing: antialiased;
+text-align: left;
+    padding: 20px 25px;
+    letter-spacing: 2px;
+
+/*폼 디자인*/
+border: 1px solid #ccc;
+//margin-left: 20px;
+margin-right: auto;
+
+    &:focus{
+        border: 1px solid #0f2027;
+    }
+`;
+
+
+//제목 폼
+const InputWrite = styled.input`
+/*전체 구도*/
+width: 710px;
+height: 40px;
+//margin: 0 auto;
+border: none;
+outline: none;
+display: flex;
+justify-content: left;
+margin-right: 20px;
+
+/*폰트 디자인*/
+padding: 15px 5px;
+text-indent: 10px;
+font-size: 13px;
+font-weight: 500;
+background-color: #fff;
+-webkit-font-smoothing: antialiased;
+text-align: left;
+
+/*폼 디자인*/
+border: 1px solid #ccc;
+
+    &:focus{
+        border: 1px solid #0f2027;
+    }
+`;
+
+
+const FormBlock = styled.div`
+width: 1024px;
+    display: flex;
+`;
+
+
+//내용 폼 글씨
+const FormBlockHeads = styled.h3`
+
+font-size: 16px;
+color: #0f2027;
+line-height: 55px;
+//text-indent: 5px;
+font-family: 'SUIT-Regular' !important;
+font-weight: 200;
+//text-indent: px;
+
+text-align: left;
+`;
+const AsteriskReds = styled.em`
+color: #ff27a3;
+font-size: 12px;
+display: inline-block;
+`;
+
+
+//내용 폼
+const TextWrite = styled.textarea`
+float: right;
+width: 980px;
+height: 500px;
+resize: none;
+border: none;
+outline: none;
+border: 1px solid #ccc;
+margin-top: 10px;
+
+/*폰트 디자인*/
+text-indent: 10px;
+font-size: 13px;
+font-weight: 500;
+background-color: #fff;
+-webkit-font-smoothing: antialiased;
+text-align: left;
+padding: 15px 5px;
+    
+    
+    &:focus{
+        border: 1px solid #0f2027;
+    }
+`;
+
+
+
+const FormWrite = styled.form`
+width: 1024px;
+/* border: 1px solid red; */
+display: flex;
+flex-direction: column;
+`;
+
+
+
+
