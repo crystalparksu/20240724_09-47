@@ -114,7 +114,7 @@ function Login() {
                                 <label for="id-save" className="label-id-save">아이디 저장</label>
                             </div>
                             {/*아이디/비밀번호 찾기*/}
-                            <a href="/findIdPassword" className="find">아이디 찾기&nbsp;&nbsp;|&nbsp;&nbsp;비밀번호 찾기</a>
+                            <a href="/FindIdPassword" className="find">아이디 찾기&nbsp;&nbsp;|&nbsp;&nbsp;비밀번호 찾기</a>
                         </EmailLoginOption>
 
 
@@ -148,7 +148,7 @@ function Login() {
                                 alt="logo"
                                 src={google}
                                 onClick={() => {
-                                    // 사용하려면 App.js에서 /로 라우팅해야 한다
+                                    // 사용하려면 Tab.js에서 /로 라우팅해야 한다
                                     window.location.replace("/users/login");
                                 }}
                             >
@@ -357,7 +357,8 @@ const EmailLoginContainer = styled.div`
     padding: 0 40px;
 `;
 
-const LoginSigninContent = styled.div``;
+const LoginSigninContent = styled.div`
+`;
 
 const RadiusButton = styled.a`
   width: 48px;

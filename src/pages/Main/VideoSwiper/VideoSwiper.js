@@ -16,7 +16,7 @@ import { EffectFade, Pagination, Navigation } from 'swiper';
 
 
 
-//App
+//Tab
 export default function App() {
     const [movieData, setMovieData] = useState({});
     return (

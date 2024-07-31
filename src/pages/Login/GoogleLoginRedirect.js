@@ -12,7 +12,7 @@ function GoogleLoginRedirect() {
         localStorage.clear();
         localStorage.setItem("token", params.token);
 
-        // 사용하려면 App.js에서 /로 라우팅해야 한다
+        // 사용하려면 Tab.js에서 /로 라우팅해야 한다
         window.location.replace("/");
     }, []);
 

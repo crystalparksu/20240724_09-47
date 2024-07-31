@@ -3,6 +3,10 @@ import {Link, useNavigate} from "react-router-dom";
 import axios from 'axios';
 // import './css/NoticeWrite.css';
 import styled from "styled-components";
+import google from "../Login/images/continue_google_neutral.png";
+
+import notice from "./images/notice_write.png";
+
 
 
 //공지사항 글쓰기
@@ -114,7 +118,7 @@ function NoticeWrite() {
                     <InputTextSizeWTypeL>
                         {/* 제목 폼 */}
                         <FormBlockHead>
-                            <AsteriskRed></AsteriskRed>제목
+                            <AsteriskRed>＊</AsteriskRed> 제목
                         </FormBlockHead>
                         <InputWrite
                             type="text"
@@ -125,91 +129,128 @@ function NoticeWrite() {
                             value={boardTitle}
                             onChange={handleTitleChange}
                         />
-                        <FormBlockHead>
-                            <AsteriskRed></AsteriskRed>작성일
-                        </FormBlockHead>
+                        {/*<FormBlockHead>*/}
+                        {/*    <AsteriskRed></AsteriskRed>작성일*/}
+                        {/*</FormBlockHead>*/}
                         {/* 등록일 폼 */}
-                        <InputDate
-                            type="date"
-                            id="date"
-                            name="date"
-                            required
-                        />
+
+                        {/*<InputDate*/}
+                        {/*    type="date"*/}
+                        {/*    id="date"*/}
+                        {/*    name="date"*/}
+                        {/*    required*/}
+                        {/*/>*/}
                     </InputTextSizeWTypeL>
+
 
 
                     <FormBlock>
                         {/* 내용 */}
                         <FormBlockHead>
-                            <AsteriskRed></AsteriskRed>내용
+                            <AsteriskRed>＊</AsteriskRed> 내용
                         </FormBlockHead>
 
-                            {/* 내용 폼 */}
-                            <TextWrite
-                                name="content"
-                                id="content"
-                                cols="auto"
-                                rows="auto"
-                                required
-                                placeholder="내용을 입력하세요"
-                                value={boardContent}
-                                onChange={handleContentChange}
-                            ></TextWrite>
+                        {/* 내용 폼 */}
+                        <TextWrite
+                            name="content"
+                            id="content"
+                            cols="auto"
+                            rows="auto"
+                            required
+                            placeholder="내용을 입력하세요"
+                            value={boardContent}
+                            onChange={handleContentChange}
+                        ></TextWrite>
 
                     </FormBlock>
 
 
-
                     <FormBlockFiles>
-                            {fileInputs.map((input, index) => (
+                        <FormBlockHead>
+                            <AsteriskRed>＊</AsteriskRed> 파일
+                        </FormBlockHead>
 
-                                <div className="filebox" key={index}>
+                        {fileInputs.map((input, index) => (
 
-                                    {/* 파일 선택 */}
-                                    <label
-                                        htmlFor="file_0">파일</label>
+                            <div className="filebox" key={index}>
 
-                                    <input type="file"
-                                           id={`file_${index}`}
-                                           name={`file_${index}`}
-                                           onChange={(e) => handleFileChange(index, e)}
-                                    />
+                                {/* 파일첨부 */}
+                                <label
+                                    htmlFor="file_0">파일첨부</label>
+                                <input type="file"
+                                       id={`file_${index}`}
+                                       name={`file_${index}`}
+                                       onChange={(e) => handleFileChange(index, e)}
+                                />
 
+                                {/* 파일 추가 */}
+                                <label
+                                    htmlFor="file_0">파일추가</label>
+                                <input type="file"
+                                       id={`file_${index}`}
+                                       name={`file_${index}`}
+                                       onChange={(e) => handleFileChange(index, e)}
+                                />
 
-                                    {/* 파일 삭제 */}
-                                    <label
-                                        htmlFor="del">삭제</label>
+                                {/* 파일삭제 */}
+                                <label
+                                    className="removeFile"
+                                    htmlFor="del">삭제
+                                </label>
 
-                                    <button
-                                        className="removeFile"
-                                        type="button"
-                                           onClick={() => removeFileInput(index)}삭제 />
+                                <input
+                                    className="removeFile"
+                                    id="del"
+                                    name="del"
+                                    type="hidden"
+                                    onClick={() => removeFileInput(index)} 파일삭제/>
 
-                                    {/*<button*/}
-                                    {/*    className="removeFile"*/}
-                                    {/*    type="button"*/}
-                                    {/*    onClick={() => removeFileInput(index)}>삭제*/}
-                                    {/*</button>*/}
+                                {/*등록 버튼*/}
+                                <label
+                                    className="submit"
+                                    htmlFor="write">작성
+                                    <img
+                                        className="submit-img"
+                                        src={notice} />
+                                </label>
 
-                                </div>))}
+                                <input
+                                    className="submit"
+                                    id="write"
+                                    name="write"
+                                    type="hidden"
+                                />
+
+                            </div>))}
+
                     </FormBlockFiles>
 
-                    {/*<button*/}
-                    {/*    className="AddFileUpload"*/}
-                    {/*    type="button"*/}
-                    {/*        onClick={addFileInput}>파일 추가</button>*/}
 
+                    {/*등록 버튼*/}
+                    {/*<FormBlockSubmit>*/}
+                    {/*    <label*/}
+                    {/*        className="submit"*/}
+                    {/*        htmlFor="write">삭제*/}
+                    {/*    </label>*/}
+
+                    {/*    <input*/}
+                    {/*        className="submit"*/}
+                    {/*        id="write"*/}
+                    {/*        name="write"*/}
+                    {/*        type="submit"*/}
+                    {/*       />*/}
+                    {/*</FormBlockSubmit>*/}
 
                     {/*/!* 글쓰기 버튼 *!/*/}
                     {/*<div className="WriteSubmit">*/}
-                            {/*    <input type="submit" value="글쓰기" className="submit"/>*/}
-                            {/*</div>*/}
+                    {/*    <input type="submit" value="글쓰기" className="submit"/>*/}
+                    {/*</div>*/}
 
                 </FormWrite>
             </FromNoticeWrap>
-        </Wrap>
-);
+        </Wrap>);
 }
+
 export default NoticeWrite;
 
 
@@ -217,11 +258,12 @@ export default NoticeWrite;
 
 //파일 전체 버튼
 const InputFile = styled.input`
+
     width: 90px;
     height: 45px;
     border: 1px solid #cccccc;
-    
-    font-size: 14px;
+
+    font-size: 13px;
     color: #0f2027;
     //padding: 10px 25px;
     text-align: center;
@@ -229,46 +271,111 @@ const InputFile = styled.input`
     justify-content: center;
     cursor: pointer;
 `;
-    
-    
+
+
+// 첨부파일 전체 박스
 const FormBlockFiles = styled.div`
-    //사이즈
-    width: 1024px;
-    height: 45px;
-    
-    //여백
-    margin-bottom: 48px;
-    margin-left: 40px;
-    margin-top: 40px;
 
     //구도
-    display: flex;
+    box-sizing: border-box;
+    vertical-align: middle;
+    width: 1024px;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    text-align: left;
+
+
+    //작성 버튼
+
+    .submit {
+        float: right;
+        width: 300px !important;
+        height: 45px !important;
+        margin-right: auto !important;
+        padding: 1em 9em !important;
+        line-height: 1.5em !important;
+        font-size: 13px !important;
+        font-weight: 600 !important;
+        cursor: pointer !important;
+        background-color: #3182f6 !important;
+        color: #fff !important;
+
+        &:hover {
+            background-color: #1776ff !important;
+        }
+
+        &:active {
+            border: 1px solid #0f2027 !important;
+        }
+
+        &:focus {
+            border: 1px solid #0f2027 !important;
+        }
+
+    }
+
+    .submit-img {
+        float: left;
+    }
+
+    .submit img {
+        width: 18px;
+        height: 18px;
+        text-align: left;
+        line-height: 25px;
+
+
+    }
+
 
     //삭제 버튼
-.removeFile{
-    
-    
-}
-    .filebox{
-    
-        
+
+    .removeFile {
+        color: #fff !important;
+        font-weight: 500 !important;
+        background-color: red !important;
+        //border: 1px solid red !important;
+
+        &:hover {
+            background-color: #ce1d1d !important;
+        }
+
+        &:active {
+            border: 1px solid #0f2027 !important;
+        }
+
+        &:focus {
+            border: 1px solid #ce1d1d !important;
+        }
+
     }
-    .filebox label {     /* 파일 필드*/
+
+
+    //버튼 전체
+
+    .filebox {
+        float: right;
+        width: 935px;
+
+    }
+
+    /* 파일 필드*/
+
+    .filebox label {
         margin-right: 20px;
-        
+
         display: inline-block;
         padding: .5em .75em;
         color: #0f2027;
-        font-size: 14px;
+        font-size: 13px;
         line-height: 30px;
         text-align: center;
         vertical-align: middle;
         background-color: #fdfdfd;
         cursor: pointer;
         border: 1px solid #ebebeb;
-  
-        
-    //사이즈
+
+        //사이즈
         width: 90px;
         height: 45px;
         border: 1px solid #ccc;
@@ -277,210 +384,206 @@ const FormBlockFiles = styled.div`
 
         &:hover {
             cursor: pointer;
-            //border: 2px solid rgb(51, 61, 75);
-            background-color:  #3182f6;;
+            background-color: #3182f6;
             color: #fff;
         }
-        
+
+        &:active {
+            border: 1px solid #0f2027;
+        }
+
+        &:focus {
+            border: 1px solid #3182f6;
+        }
     }
-    .filebox input[type="file"] {  /* 파일 필드 숨기기 */
+
+    /* 파일 필드 숨기기 */
+
+    .filebox input[type="file"] {
         position: absolute;
         width: 1px;
         height: 1px;
         padding: 0;
         margin: -1px;
         overflow: hidden;
-        clip:rect(0,0,0,0);
+        clip: rect(0, 0, 0, 0);
         border: 0;
     }
 `;
 
 
-
-
-
-
 //전체
 const Wrap = styled.div`
-width: 100%;
-//height: 100vh;
-position: relative;
-margin: 0 auto;
-//padding: 40px 40px;
-//background: rgb(255,255,255);
-background: #fff;
-display: inline-block;
+    width: 100%;
+    //height: 100vh;
+    position: relative;
+    margin: 0 auto;
+    //padding: 40px 40px;
+    //background: rgb(255,255,255);
+    background: #fff;
+    display: inline-block;
 `;
 //감싸는 전체
 const FromNoticeWrap = styled.div`
-width: 1024px;
-position: relative;
-margin: 0 auto;
-background: #fff;
-margin-bottom: 48px;
-padding-top: 40px;
+    width: 1024px;
+    position: relative;
+    margin: 0 auto;
+    background: #fff;
+    margin-bottom: 48px;
+    padding-top: 40px;
 `;
 //제목감싸는 박스
 const Header = styled.div`
-width: 1024px;
-margin: 0 auto;
-//background: red;
-font-family: 'SUIT-Regular' !important;
-color: rgb(51, 61, 75);
-font-size: 36px;
-font-weight: 800;
-text-align: left;
+    width: 1024px;
+    margin: 0 auto;
+    //background: red;
+    font-family: 'SUIT-Regular' !important;
+    color: rgb(51, 61, 75);
+    font-size: 36px;
+    font-weight: 800;
+    text-align: left;
 `;
 //제목+ 등록 폼 감싸는 박스
 const InputTextSizeWTypeL = styled.div`
-box-sizing: border-box;
-vertical-align: middle;
-height: 48px;
-display: flex;
-width: 1024px;
-margin-top: 1px;
-text-align: left;
+    //background-color: red;
+    
+    box-sizing: border-box;
+    vertical-align: middle;
+    height: 48px;
+    //display: flex;
+    width: 1024px;
+    margin-top: 1px;
+    text-align: left;
 `;
+
+
 //폼 시작 전 글씨 스타일
 // 모든 폼 폰트 사이즈
 const FormBlockHead = styled.h3`
-font-size: 16px;
-color: #0f2027;
-line-height: 40px;
-//text-indent: 5px;
-font-family: 'SUIT-Regular' !important;
-font-weight: 200;
-//text-indent: px;
-margin-right: 10px;
-text-align: left;
+    text-indent: 30px;
+    float: left;
+    font-size: 14px;
+    color: #0f2027;
+    line-height: 40px;
+    //text-indent: 5px;
+    font-family: 'SUIT-Regular' !important;
+    font-weight: 200;
+    //text-indent: px;
+    margin-right: 10px;
+    text-align: left;
 `;
 const AsteriskRed = styled.em`
-color: #ff27a3;
-font-size: 12px;
-display: inline-block;
+    color: #ff27a3;
+    font-size: 12px;
+    //display: inline-block;
 `;
 
-//등록폼
-const InputDate = styled.input`
-width: 200px;
-height: 40px;
-//margin-left: 40px;
-border: none;
-outline: none;
-display: flex;
-justify-content: right;
-float: right;
-/*폰트 디자인*/
-padding: 15px 5px;
-text-indent: 10px;
-font-size: 13px;
-font-weight: 500;
-background-color: #fff;
--webkit-font-smoothing: antialiased;
-text-align: left;
-    padding: 20px 25px;
-    letter-spacing: 2px;
-
-/*폼 디자인*/
-border: 1px solid #ccc;
-//margin-left: 20px;
-margin-right: auto;
-
-    &:focus{
-        border: 1px solid #0f2027;
-    }
-`;
+// //등록폼
+// const InputDate = styled.input`
+//     width: 200px;
+//     height: 40px;
+//     //margin-left: 40px;
+//     border: none;
+//     outline: none;
+//     display: flex;
+//     justify-content: right;
+//     float: right;
+//     /*폰트 디자인*/
+//     padding: 15px 5px;
+//     text-indent: 10px;
+//     font-size: 13px;
+//     font-weight: 500;
+//     background-color: #fff;
+//     -webkit-font-smoothing: antialiased;
+//     text-align: left;
+//     padding: 20px 25px;
+//     letter-spacing: 2px;
+//
+//     /*폼 디자인*/
+//     border: 1px solid #ccc;
+//     //margin-left: 20px;
+//     margin-right: auto;
+//
+//
+//     &:focus {
+//         border: 1px solid #0f2027;
+//     }
+//
+// `;
 
 
 //제목 폼
 const InputWrite = styled.input`
-/*전체 구도*/
-width: 710px;
-height: 40px;
-//margin: 0 auto;
-border: none;
-outline: none;
-display: flex;
-justify-content: left;
-margin-right: 20px;
+    /*전체 구도*/
+    width: 935px;
+    height: 40px;
+    border: none;
+    outline: none;
+    float: right;
+    margin-right: auto;
 
-/*폰트 디자인*/
-padding: 15px 5px;
-text-indent: 10px;
-font-size: 13px;
-font-weight: 500;
-background-color: #fff;
--webkit-font-smoothing: antialiased;
-text-align: left;
+    /*폰트 디자인*/
+    padding: 15px 5px;
+    text-indent: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    text-align: left;
 
-/*폼 디자인*/
-border: 1px solid #ccc;
+    /*폼 디자인*/
+    border: 1px solid #ccc;
 
-    &:focus{
+    &:focus {
         border: 1px solid #0f2027;
     }
 `;
 
-
+// 내용 전체 박스
 const FormBlock = styled.div`
-width: 1024px;
-    display: flex;
-`;
-
-
-//내용 폼 글씨
-const FormBlockHeads = styled.h3`
-
-font-size: 16px;
-color: #0f2027;
-line-height: 55px;
-//text-indent: 5px;
-font-family: 'SUIT-Regular' !important;
-font-weight: 200;
-//text-indent: px;
-
-text-align: left;
-`;
-const AsteriskReds = styled.em`
-color: #ff27a3;
-font-size: 12px;
-display: inline-block;
+    box-sizing: border-box;
+    vertical-align: middle;
+    width: 1024px;
+    margin-top: 1px;
+    text-align: left;
+    //background-color: red;
 `;
 
 
 //내용 폼
 const TextWrite = styled.textarea`
-float: right;
-width: 980px;
-height: 500px;
-resize: none;
-border: none;
-outline: none;
-border: 1px solid #ccc;
-margin-top: 10px;
+    float: right;
+    width: 935px;
+    height: 500px;
+    resize: none;
+    border: none;
+    outline: none;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: auto;
+    
+    /*폰트 디자인*/
+    text-indent: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    text-align: left;
+    padding: 15px 5px;
 
-/*폰트 디자인*/
-text-indent: 10px;
-font-size: 13px;
-font-weight: 500;
-background-color: #fff;
--webkit-font-smoothing: antialiased;
-text-align: left;
-padding: 15px 5px;
-    
-    
-    &:focus{
+
+    &:focus {
         border: 1px solid #0f2027;
     }
 `;
 
 
-
 const FormWrite = styled.form`
-width: 1024px;
-/* border: 1px solid red; */
-display: flex;
-flex-direction: column;
+    width: 1024px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
 `;
 
 

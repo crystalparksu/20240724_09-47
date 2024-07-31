@@ -199,6 +199,7 @@ function SignUp() {
                             <FormBlockHead>
                                 <AsteriskRed>*</AsteriskRed> 아이디
                             </FormBlockHead>
+
                             <FormBlockBody>
                                 <InputTextSizeW>
                                     <EmailInput
@@ -801,7 +802,6 @@ const InputTextSizeW = styled.div`
   vertical-align: middle;
   box-sizing: border-box;
     outline: none;
-    
 `;
 
 const FormBlockBody = styled.div`

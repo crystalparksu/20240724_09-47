@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getPostByNo } from '../../Data';
 import './css/Notice.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 

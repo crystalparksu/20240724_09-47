@@ -1,14 +1,0 @@
-
-wjavascript:S1128")Remove this unused import of 'useParams'.(ÌÇ‡­øÿÿÿÿ8ÿ†„§‹2J$f0d46365-b3dd-4ccf-aa8e-d723e9e77f49
-ojavascript:S6774"&'movie' is missing in props validation(†‹¥æ8ÿ†„§‹2J$05d61396-0622-4283-98a1-a07421066981
-ˆjavascript:S1481":Remove the declaration of the unused 'movieName' variable.(²¾âôÿÿÿÿÿ8·‡‡©‹2J$e988a5b9-55b0-4e4f-897d-bf3a1020346b
-~javascript:S6774"0'movie.movieName' is missing in props validation(²¾âôÿÿÿÿÿ8ÿ†„§‹2J$313417d9-7d3f-4fda-baa1-04079ba8f247
-…javascript:S1854"7Remove this useless assignment to variable "movieName".(²¾âôÿÿÿÿÿ8¸‡‡©‹2J$4e33e9f3-1056-4a3d-b814-dfd587e23f82
-‘javascript:S1481"CRemove the declaration of the unused 'movieNameInEnglish' variable.(ĞÎŞœüÿÿÿÿ8¸‡‡©‹2J$f262ff91-acb6-43be-b332-3203321c6a70
-‡javascript:S6774"9'movie.movieNameInEnglish' is missing in props validation(ĞÎŞœüÿÿÿÿ8ÿ†„§‹2J$1045f57c-6062-4a04-b618-e47be4717199
-javascript:S1854"@Remove this useless assignment to variable "movieNameInEnglish".(ĞÎŞœüÿÿÿÿ8¸‡‡©‹2J$4463c7a5-3c22-40c6-a328-6848534b8c6d
-†javascript:S6774"='movie.movieThumbnailImageUrl' is missing in props validation(›Ş¼×8ÿ†„§‹2J$7d976c83-4524-47e7-b808-2567ccb960c6
-†javascript:S6774"='movie.movieSimpleDescription' is missing in props validation(ËšÓ8ÿ†„§‹2J$5be0e599-1b8c-4d0f-9c0c-9b8ea0375292
-…javascript:S1481"<Remove the declaration of the unused 'goToBooking' variable.(²ÓòÙ8¬îƒ©‹2J$85823df9-8088-4bc2-bf81-b7965837787f
-‚javascript:S1854"9Remove this useless assignment to variable "goToBooking".(²ÓòÙ8­îƒ©‹2J$84c63ea0-4666-446b-af68-b67154eb5a9a
-wjavascript:S6774/")'movie.id' is missing in props validation(‘¥±£ıÿÿÿÿ8ÿ†„§‹2J$f89d0ea7-d5b7-475d-8658-5ffc9a76b1d6

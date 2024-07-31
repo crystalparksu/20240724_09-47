@@ -1,15 +1,0 @@
-
-‚javascript:S1481"9Remove the declaration of the unused 'navigate' variable.(õÜ¢8˜øœë2J$ae5240c1-40e5-4f96-a875-55c740af5f2b
-javascript:S1854"6Remove this useless assignment to variable "navigate".(õÜ¢8šøœë2J$6c8f6f45-1aa3-4647-8ad6-dea498f04d14
-†javascript:S1481"8Remove the declaration of the unused 'message' variable.( «Êñûÿÿÿÿ8šøœë2J$02fc38d0-7d90-4e75-8620-0116ee403aef
-ƒjavascript:S1854"5Remove this useless assignment to variable "message".( «Êñûÿÿÿÿ8šøœë2J$f6c9bd95-2891-465d-828c-70f9f0291344
-’javascript:S1481#"IRemove the declaration of the unused 'handleFindPasswordChange' variable.(êÃ¨8šøœë2J$f24827f5-c5e5-4544-bb91-fed70284afa3
-javascript:S1854#"FRemove this useless assignment to variable "handleFindPasswordChange".(êÃ¨8šøœë2J$b841dd45-1d4d-40d8-8172-35b3533df2d8
-Œjavascript:S14813"CRemove the declaration of the unused 'handleFindPassword' variable.(ì³çÓ8›øœë2J$ec4f07e6-d44b-42a1-9053-889217ab950a
-‰javascript:S18543"@Remove this useless assignment to variable "handleFindPassword".(ì³çÓ8›øœë2J$a750c5a0-ecf1-4998-a920-223d858b6c05
-‚javascript:S14816"9Remove the declaration of the unused 'response' variable.(©åõ÷8›øœë2J$527d5cba-7138-4984-a4ab-279fe322ee71
-javascript:S18546"6Remove this useless assignment to variable "response".(©åõ÷8›øœë2J$3e8d2445-7499-4b14-9746-fda798521dae
-ƒjavascript:S6754F":useState call is not destructured into value + setter pair(ãÂ€à8ºøœë2J$a33be22e-c318-4992-b51f-a17e17e05290
-sjavascript:S6477e"*Missing "key" prop for element in iterator(ÎæÌˆ8¥ÅÑë2J$50436303-0770-42ea-9ad1-5cc69bfb8d18
-›javascript:S6847e"RNon-interactive elements should not be assigned mouse or keyboard event listeners.(ÎæÌˆ8¥ÅÑë2J$def7ad3e-4def-4d4b-bcf6-310a3fb30e91
-¨javascript:S1082e"_Visible, non-interactive elements with click handlers must have at least one keyboard listener.(ÎæÌˆ8¥ÅÑë2J$e1e93640-b055-48b8-818a-7ab81c32ef8a

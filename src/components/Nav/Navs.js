@@ -105,7 +105,7 @@ function Navs() {
 
                 <MenuName
                     onClick={() => {
-                        goToPage('/mypage');
+                        goToPage('/user/mypage');
                     }}
                     scrollposition={scrollPosition}
                 >
@@ -202,7 +202,7 @@ const NavWrapper = styled.div`
     
     
   //스크롤 시 
-    background: ${props => (props.scrollposition > 100 ? '#fff' : 'rgba(225, 225, 255, 0.1)')};
+    background: ${props => (props.scrollposition > 100 ? '#fff' : 'rgba(0, 0, 0, 0.1)')};
   transition: 0.2s ease-out;
   z-index: 100;
 `;
